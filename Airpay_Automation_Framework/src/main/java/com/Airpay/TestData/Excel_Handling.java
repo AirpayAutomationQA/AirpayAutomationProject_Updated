@@ -71,7 +71,36 @@ public class Excel_Handling {
 			System.out.println("There is error reading/loading xls file, due to " + ex);
 		}
 	}
-
+public static int sheet11;
+	public void ExcelReaderCount(String fileName, int sheetname) {
+		try {
+			fis = new FileInputStream(new File(fileName));
+			workbook = new XSSFWorkbook(fis);
+			sheet11 = workbook.getNumberOfSheets();
+			
+			fileFullPath=fileName;
+			createcopy();
+			fis.close();
+			
+			fis2 = new FileInputStream(new File(resultPath));
+			workbook2 = new XSSFWorkbook(fis2);
+			sheet2 = workbook2.getSheet(resultSheetName2);
+			fileFullPath2=resultPath;
+			srcSheetName=resultSheetName2;
+			
+			
+		} catch (FileNotFoundException fnfEx) {
+			System.out.println(fileName + " is not Found. please check the file name.");
+			System.exit(0);
+		} catch (IOException ioEx) {
+			System.out.println(fis + " is not Found. please check the path.");
+		} catch (Exception ex) {
+			System.out.println("There is error reading/loading xls file, due to " + ex);
+		}
+	}
+	
+	
+	
 	public int searchField(String sheetName, int colNum, String value) throws Exception {
 		try {
 			int rowCount = sheet.getLastRowNum();

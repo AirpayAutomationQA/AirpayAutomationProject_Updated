@@ -79,6 +79,45 @@ public class AirPay_PaymentPage_BusinessLogic extends Airpay_PaymentPage_PageObj
 	}
 
 
+	public void LocalHostDetailPage_Merchant_Wallet() throws Exception {
+		try{ 
+			Log.info("Navigating To Local Host page of Payment");	   
+			if(Assert.isElementDisplay(driver, BuyerMailId))
+			{ 
+				Log.debug("Local Host page");
+				Assert.inputText(driver, BuyerMailId, Excel_Handling.Get_Data(TC_ID, "BuyerMailID"), "Buyer Mail ID");
+				Assert.inputText(driver, BuyerPhoneNumber, Excel_Handling.Get_Data(TC_ID, "BuyerPhoneNumber"), "Buyer Phone Number");
+				Assert.inputText(driver, BuyerFirstName, Excel_Handling.Get_Data(TC_ID, "BuyerFirstName"), "Buyer First Name");
+				Assert.inputText(driver, BuyerLastName, Excel_Handling.Get_Data(TC_ID, "BuyerLastName"), "Buyer Last Name");
+				//Assert.inputText(driver, Order_Id, Excel_Handling.Get_Data(TC_ID, "Order_Id"), "Order_Id");			
+				String  string = RandomStringUtils.randomAlphabetic(8);		
+				System.out.println("Random 1 = " + string);				
+				Assert.inputText(driver, Order_Id, string, "Order_Id");
+				GetOrderID = driver.findElement(By.xpath(Order_Id)).getAttribute("value");
+				Assert.inputText(driver, Amount, Excel_Handling.Get_Data(TC_ID, "Amount"), "Amount");
+				//Assert.inputText(driver, Order_Id, Excel_Handling.Get_Data(TC_ID, "Order_Id"), "Order_Id");
+				Assert.inputText(driver, Amount, Excel_Handling.Get_Data(TC_ID, "Amount"), "Amount");
+				Extent_Reporting.Log_report_img("Local Host page required field filled", "Passed", driver);
+				Assert.inputText(driver, "//*[@name='wallet' and @id='wallet']", Excel_Handling.Get_Data(TC_ID, "Transaction_Wallet"), "Transaction Wallet");
+				Assert.Clickbtn(driver, payHerebtn, "Pay Here");
+				Assert.waitForPageToLoad(driver);
+			}
+			else{
+				Extent_Reporting.Log_Fail("Local Host page not exist ", "Local Host page not displayed", driver);   
+				Log.error("Local Host page not successfully displayed");
+				throw new Exception(" Test failed due to local host page not displayed");
+			}
+		}                     
+		catch(Exception e)	
+		{
+			Log.error("Test failed due to local host page not displayed");
+			e.printStackTrace();
+			throw new Exception("Test failed due to local host page not displayed");
+		}
+	}
+
+	
+	
 	/**
 	 * @author parmeshwar Sakole
 	 * Following method is used for Filling up the local host details page.
@@ -427,6 +466,7 @@ public class AirPay_PaymentPage_BusinessLogic extends Airpay_PaymentPage_PageObj
 			Log.info("Navigating To Payment Page");	 
 			//Assert.waitForFrameAndSwitch(driver, "tranframe");
 			String Card = Excel_Handling.Get_Data(TC_ID, "Payment_Mode").trim();
+			System.out.println("Card"+Card);
 			Assert.waitForPageToLoad(driver);		
 			List<WebElement> Channels = driver.findElements(By.xpath(AirPay_Payment_MA_Panel_PageObject.ExpressPaymentCardSaves));
 			int ChannelsCnt = Channels.size();

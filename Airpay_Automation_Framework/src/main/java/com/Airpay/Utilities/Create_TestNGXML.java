@@ -1,4 +1,4 @@
-package com.Airpay.Utilities;
+ package com.Airpay.Utilities;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -35,7 +35,6 @@ public class Create_TestNGXML {
         }
         return includes;
     }
-
 	
 	@SuppressWarnings("deprecation")
 	@Test     
@@ -54,9 +53,7 @@ public class Create_TestNGXML {
 		// Excel sheet 1 st one.........................................	
     	
 		
-		Excel_Handling excel = new Excel_Handling();
-		
-		
+		Excel_Handling excel = new Excel_Handling();		
 		excel.ExcelReader(Constants.datasheetPath+"Datasheet.xlsx", "NoramlKit", Constants.datasheetPath+"Datasheet_Result.xlsx", "NoramlKit");
 		try {
 			excel.getExcelDataAll("NoramlKit", "Execute", "Y", "TC_ID");		

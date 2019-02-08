@@ -13,6 +13,19 @@ public class Airpay_CAPanel_PageObject {
 			public static final  String  LogoutIcon = "//*[@class='dropdown-toggle']";	
 			public static final  String  CALogOutBtn = "//*[@class='consumerbut']";
 			
+			public static final String AAdharField ="//*[@id='aadhar']";
+			public static final String PANField ="//*[@id='pan']";
+			public static final String ProfileSubmtBtn ="//*[@id='profile-submit-button']";
+			public static final String ProfileCAErrorMsg ="(//*[@id='aadhar']//following::span[@class='help-block with-errors'])[1]";
+			public static final String AadharCadInvalidErMsg ="//*[text()='Aadhar number is invalid']";
+			public static final String PanCadInvalidErMsg ="//*[text()='PAN number is invalid']";
+
+			
+			
+			
+			
+			
+			
 			
 			
 			

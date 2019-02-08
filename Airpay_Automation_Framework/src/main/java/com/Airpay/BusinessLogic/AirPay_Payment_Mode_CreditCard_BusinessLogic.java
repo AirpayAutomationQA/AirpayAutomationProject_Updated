@@ -8,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.HasInputDevices;
 import org.openqa.selenium.interactions.Keyboard;
-import org.openqa.selenium.support.ui.Select;
 
 import java.awt.Robot;
 import java.awt.Toolkit;
@@ -429,11 +428,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			e.printStackTrace();
 			throw new Exception("Test failed due to local host page not displayed");
 		}
-	}	
-	
-	
-
-	//*[@class='msgclosebtn']
+	}		
 
 	public void sessionTimeOut() throws Exception{
 		try{
@@ -456,8 +451,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 							|| errMsg.contains("VPA is not registered"))
 					{
 						Extent_Reporting.Log_Pass("Repective Error Message is exist", "Error Msg is:"+errMsg);
-						Extent_Reporting.Log_report_img("Respective Error Message is exist", "Passed", driver);	
-						
+						Extent_Reporting.Log_report_img("Respective Error Message is exist", "Passed", driver);					
 						break;
 					}
 				}
@@ -466,9 +460,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Repective Error Message does not exist", "Error Msg is:"+errMsg, driver);
 
 		}
-
 	}
-	
 	
 	public void sessionInvalidUserID() throws Exception{
 		try{		
@@ -491,7 +483,6 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Repective Error Message does not exist", "Error Msg is:"+errMsg, driver);
 
 		}
-
 	}
 	
 
@@ -1044,7 +1035,8 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 					if(tblrowVal.equalsIgnoreCase("AMOUNT:")){
 						//Extent_Reporting.Log_Pass("Actual Amount field Name Is: "+tblrowVal, "Expected Amount field Name is: "+"AMOUNT:");
 						String TxnAmt = driver.findElement(By.xpath("(//table[2]/tbody/tr/td[2])["+i+"]")).getText().trim();
-						if(TxnAmt.equalsIgnoreCase(Excel_Handling.Get_Data(TC_ID, "Amount").trim())||TxnAmt.contains(AirPay_MA_Panel_Select_Merchant_BusinessLogic.MINADDONE)
+						System.out.println("dd"+TxnAmt);
+						if(TxnAmt.contains(Excel_Handling.Get_Data(TC_ID, "Amount").trim())||TxnAmt.contains(AirPay_MA_Panel_Select_Merchant_BusinessLogic.MINADDONE)
 								||TxnAmt.contains(TotAmt)){
 							Extent_Reporting.Log_Pass("Actual Transaction Amount is: "+TxnAmt, "Passed");
 							Extent_Reporting.Log_report_img("Success payment Transaction Amount is as expected", "Passed", driver);

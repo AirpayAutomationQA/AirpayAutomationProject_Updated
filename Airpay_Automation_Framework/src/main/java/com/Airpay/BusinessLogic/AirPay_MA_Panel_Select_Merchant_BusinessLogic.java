@@ -114,7 +114,7 @@ public class AirPay_MA_Panel_Select_Merchant_BusinessLogic extends Airpay_Paymen
 	public void Choose_Merchant() throws Exception{
 		try{
 			if(Assert.isElementDisplayed(driver, AirPay_Payment_MA_Panel_PageObject.MM_Merchant_Select, "Merchant Select")){	
-				String MerchantName=driver.findElement(By.xpath(AirPay_Payment_MA_Panel_PageObject.MM_Merchant_IDName)).getText().trim();
+				MerchantName=driver.findElement(By.xpath(AirPay_Payment_MA_Panel_PageObject.MM_Merchant_IDName)).getText().trim();
 				Assert.Clickbtn(driver, AirPay_Payment_MA_Panel_PageObject.MM_Merchant_SelectBtn+"["+1+"]", "Select Merchant");
 				Assert.waitForPageToLoad(driver);
 				Thread.sleep(20000);

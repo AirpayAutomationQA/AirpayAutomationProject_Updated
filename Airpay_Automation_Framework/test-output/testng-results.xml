@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Airpay" duration-ms="29862" started-at="2019-01-29T05:47:42Z" finished-at="2019-01-29T05:48:12Z">
+  <suite name="Airpay" duration-ms="14095" started-at="2019-02-08T04:00:27Z" finished-at="2019-02-08T04:00:41Z">
     <groups>
     </groups>
-    <test name="TC_PP_NetBanking_errorValidtion" duration-ms="29862" started-at="2019-01-29T05:47:42Z" finished-at="2019-01-29T05:48:12Z">
-      <class name="com.Airpay.Tests.TC_PP_NetBanking_errorValidtion">
-        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Airpay.Tests.TC_PP_NetBanking_errorValidtion@5e5ddfbc]" name="initializeTestBaseSetup" is-config="true" duration-ms="8646" started-at="2019-01-29T11:17:42Z" finished-at="2019-01-29T11:17:51Z">
+    <test name="TC_PP_02_Verify_when_user_does_not_Pass_Mandatory_Invalid_orderID" duration-ms="14095" started-at="2019-02-08T04:00:27Z" finished-at="2019-02-08T04:00:41Z">
+      <class name="com.Airpay.Tests.TC_PP_01">
+        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Airpay.Tests.TC_PP_01@26d820eb]" name="initializeTestBaseSetup" is-config="true" duration-ms="8525" started-at="2019-02-08T09:30:27Z" finished-at="2019-02-08T09:30:36Z">
           <params>
             <param index="0">
               <value>
@@ -21,26 +21,26 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[TC_PP_NetBanking_errorValidtion]]>
+                <![CDATA[TC_PP_02_Verify_when_user_does_not_Pass_Mandatory_Invalid_orderID]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTestBaseSetup -->
-        <test-method status="PASS" signature="setup()[pri:1, instance:com.Airpay.Tests.TC_PP_NetBanking_errorValidtion@5e5ddfbc]" name="setup" duration-ms="0" started-at="2019-01-29T11:17:51Z" finished-at="2019-01-29T11:17:51Z">
+        <test-method status="PASS" signature="setup()[pri:1, instance:com.Airpay.Tests.TC_PP_01@26d820eb]" name="setup" duration-ms="1" started-at="2019-02-08T09:30:36Z" finished-at="2019-02-08T09:30:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="TC_TestCaseName()[pri:2, instance:com.Airpay.Tests.TC_PP_NetBanking_errorValidtion@5e5ddfbc]" name="TC_TestCaseName" duration-ms="21072" started-at="2019-01-29T11:17:51Z" finished-at="2019-01-29T11:18:12Z">
+        <test-method status="PASS" signature="TC_TestCaseName()[pri:2, instance:com.Airpay.Tests.TC_PP_01@26d820eb]" name="TC_TestCaseName" duration-ms="3206" started-at="2019-02-08T09:30:36Z" finished-at="2019-02-08T09:30:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_TestCaseName -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.Airpay.Tests.TC_PP_NetBanking_errorValidtion@5e5ddfbc]" name="tearDown" is-config="true" duration-ms="134" started-at="2019-01-29T11:18:12Z" finished-at="2019-01-29T11:18:12Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.Airpay.Tests.TC_PP_01@26d820eb]" name="tearDown" is-config="true" duration-ms="2363" started-at="2019-02-08T09:30:39Z" finished-at="2019-02-08T09:30:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.Airpay.Tests.TC_PP_NetBanking_errorValidtion -->
-    </test> <!-- TC_PP_NetBanking_errorValidtion -->
+      </class> <!-- com.Airpay.Tests.TC_PP_01 -->
+    </test> <!-- TC_PP_02_Verify_when_user_does_not_Pass_Mandatory_Invalid_orderID -->
   </suite> <!-- Airpay -->
 </testng-results>
