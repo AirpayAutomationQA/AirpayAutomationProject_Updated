@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Airpay" duration-ms="11624" started-at="2019-02-11T07:23:23Z" finished-at="2019-02-11T07:23:35Z">
+  <suite name="Airpay" duration-ms="12131" started-at="2019-02-11T07:49:32Z" finished-at="2019-02-11T07:49:45Z">
     <groups>
     </groups>
-    <test name="TC_PP_03_Verify_when_user_does_not_Pass_Mandatory_Invalid_FirstName" duration-ms="11624" started-at="2019-02-11T07:23:23Z" finished-at="2019-02-11T07:23:35Z">
+    <test name="TC_PP_03_Verify_when_user_does_not_Pass_Mandatory_Invalid_FirstName" duration-ms="12131" started-at="2019-02-11T07:49:32Z" finished-at="2019-02-11T07:49:45Z">
       <class name="com.Airpay.Tests.TC_PP_01">
-        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Airpay.Tests.TC_PP_01@4397a639]" name="initializeTestBaseSetup" is-config="true" duration-ms="8503" started-at="2019-02-11T12:53:23Z" finished-at="2019-02-11T12:53:32Z">
+        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Airpay.Tests.TC_PP_01@4397a639]" name="initializeTestBaseSetup" is-config="true" duration-ms="8568" started-at="2019-02-11T13:19:32Z" finished-at="2019-02-11T13:19:41Z">
           <params>
             <param index="0">
               <value>
@@ -28,15 +28,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTestBaseSetup -->
-        <test-method status="PASS" signature="setup()[pri:1, instance:com.Airpay.Tests.TC_PP_01@4397a639]" name="setup" duration-ms="0" started-at="2019-02-11T12:53:32Z" finished-at="2019-02-11T12:53:32Z">
+        <test-method status="PASS" signature="setup()[pri:1, instance:com.Airpay.Tests.TC_PP_01@4397a639]" name="setup" duration-ms="0" started-at="2019-02-11T13:19:41Z" finished-at="2019-02-11T13:19:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="TC_TestCaseName()[pri:2, instance:com.Airpay.Tests.TC_PP_01@4397a639]" name="TC_TestCaseName" duration-ms="2988" started-at="2019-02-11T12:53:32Z" finished-at="2019-02-11T12:53:35Z">
+        <test-method status="PASS" signature="TC_TestCaseName()[pri:2, instance:com.Airpay.Tests.TC_PP_01@4397a639]" name="TC_TestCaseName" duration-ms="3382" started-at="2019-02-11T13:19:41Z" finished-at="2019-02-11T13:19:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_TestCaseName -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.Airpay.Tests.TC_PP_01@4397a639]" name="tearDown" is-config="true" duration-ms="132" started-at="2019-02-11T12:53:35Z" finished-at="2019-02-11T12:53:35Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.Airpay.Tests.TC_PP_01@4397a639]" name="tearDown" is-config="true" duration-ms="180" started-at="2019-02-11T13:19:44Z" finished-at="2019-02-11T13:19:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
