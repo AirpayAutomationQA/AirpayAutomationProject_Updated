@@ -809,7 +809,7 @@ public class AirPay_PaymentPage_BusinessLogic extends Airpay_PaymentPage_PageObj
 			Thread.sleep(2000);
 			if(Assert.isElementDisplayed(driver, LogoPaymentPage, "Logo payment page" ))
 			{         	
-				Assert.Verify_Image(driver, ImgLogo, "Airpay Logo");
+				//Assert.Verify_Image(driver, ImgLogo, "Airpay Logo");
 				//Assert.isElementDisplayed(driver, airPayFavIcon, "Airpay Fav icon");
 				Extent_Reporting.Log_report_img("Respective Details is exist", "Passed", driver);
 			}else{

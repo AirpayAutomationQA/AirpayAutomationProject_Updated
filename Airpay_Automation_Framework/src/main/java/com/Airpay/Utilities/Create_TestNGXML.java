@@ -65,7 +65,11 @@ public class Create_TestNGXML {
 			System.out.println(SheetnameTest);		
 			excel.ExcelReader(Constants.datasheetPath+"Datasheet.xlsx", SheetnameTest, Constants.datasheetPath+"Datasheet_Result.xlsx", SheetnameTest);
 			try {
-				excel.getExcelDataAll(SheetnameTest, "Execute", "Y", "TC_ID");		
+				excel.getExcelDataAll(SheetnameTest, "Execute", "Y", "TC_ID");	
+				if(excel.TestData.isEmpty())
+				{
+					continue;
+				}
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

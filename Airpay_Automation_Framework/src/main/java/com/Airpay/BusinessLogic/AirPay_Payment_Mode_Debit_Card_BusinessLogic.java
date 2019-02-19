@@ -176,12 +176,15 @@ public class AirPay_Payment_Mode_Debit_Card_BusinessLogic extends Airpay_Payment
 			Assert.inputText(driver, DebitCardExpDate,Excel_Handling.Get_Data(TC_ID, "CardExpDate").trim(), "Debit card Number Exp Date");
 			Assert.inputText(driver, DebitCardCVVCode,Excel_Handling.Get_Data(TC_ID, "CardCVVCode").trim(), "Debit card Number CVVCode");
 			Extent_Reporting.Log_report_img("All details has been Entered", "Passed s", driver);
-			Assert.Clickbtn(driver, "//div[@class='sumbtn desksumbtn iplus']", "Amount Plus button");			
-			PassedAmt = driver.findElement(By.xpath("//div[@class='main-amount-block show-amnt']//following::span[@id='total_amount']")).getText().trim();
-			confFees = driver.findElement(By.xpath("(//*[@class='surcharge_amount'])[1]")).getText().trim();
-			TotAmt = driver.findElement(By.xpath("//span[@class='amount-value-block']")).getText().trim();
-			Extent_Reporting.Log_report_img("Surcharge filed snap", "Passed", driver);
-			Extent_Reporting.Log_Pass("Surcharge Amount: "+confFees, "Total Amount: "+TotAmt);
+			if(Assert.isElementDisplay(driver, "//div[@class='sumbtn desksumbtn iplus']")){
+				Assert.Clickbtn(driver, "//div[@class='sumbtn desksumbtn iplus']", "Amount Plus button");			
+				PassedAmt = driver.findElement(By.xpath("//div[@class='main-amount-block show-amnt']//following::span[@id='total_amount']")).getText().trim();
+				confFees = driver.findElement(By.xpath("(//*[@class='surcharge_amount'])[1]")).getText().trim();
+				TotAmt = driver.findElement(By.xpath("//span[@class='amount-value-block']")).getText().trim();
+				Extent_Reporting.Log_report_img("Surcharge filed snap", "Passed", driver);
+				Extent_Reporting.Log_Pass("Surcharge Amount: "+confFees, "Total Amount: "+TotAmt);
+			}			
+			Extent_Reporting.Log_report_img("ScreenPrint", "Passed", driver);
 			Assert.Clickbtn(driver, DebitCardMakePaymtBtn, "Debit Card make payment button");	
 			Thread.sleep(10000);
 		}catch(Exception e)	
@@ -207,10 +210,8 @@ public class AirPay_Payment_Mode_Debit_Card_BusinessLogic extends Airpay_Payment
 			}
 		}catch(Exception e)	
 		{
-			Extent_Reporting.Log_Fail("Surcharge Amount field does not exist", "Failed", driver);   
-			Log.error("Surcharge Amount field does not exist");
-			e.printStackTrace();
-			throw new Exception("Some fields or else data issue is exist");
+			Extent_Reporting.Log_Pass("Surcharge Amount not applied", "Passed");
+			
 		}
 	}
 	
@@ -229,10 +230,8 @@ public class AirPay_Payment_Mode_Debit_Card_BusinessLogic extends Airpay_Payment
 			}
 		}catch(Exception e)	
 		{
-			Extent_Reporting.Log_Fail("Surcharge Amount field does not exist", "Failed", driver);   
-			Log.error("Surcharge Amount field does not exist");
-			e.printStackTrace();
-			throw new Exception("Some fields or else data issue is exist");
+			Extent_Reporting.Log_Pass("Surcharge Amount not applied", "Passed");
+
 		}
 	}
 	

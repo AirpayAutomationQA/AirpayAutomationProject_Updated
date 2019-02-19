@@ -32,7 +32,7 @@ public class TC_PP_09_Debit_Card extends Driver_Setup{
 			AirPay_Payment_Mode_CreditCard_BusinessLogic CreditCard = new AirPay_Payment_Mode_CreditCard_BusinessLogic(driver, TC_ID);
 			AirPay_Payment_Mode_Debit_Card_BusinessLogic DebitCard = new AirPay_Payment_Mode_Debit_Card_BusinessLogic(driver, TC_ID);	
 				AirPay_Local.LocalHostDetailPage_ErrorVerify();	
-				//AirPay_Local.Verify_PaymentPageFields();
+				AirPay_Local.Verify_PaymentPageFields();
 				AirPay_Local.Card_Details_Options();
 				DebitCard.Debit_cardProvidingValues();	
 				CreditCard.CaseSensitiveValidation(Airpay_PaymentPage_PageObject.DebitCardNoInput,"[^'a-zA-Z ]");	

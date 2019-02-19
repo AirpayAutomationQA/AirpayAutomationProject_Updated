@@ -2,14 +2,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Airpay]">
   <parameter name="appURL" value="http://localhost/airpay_php/transaction.html"/>
-  <parameter name="tcID" value="TC_PP_03_Verify_when_user_does_not_Pass_Mandatory_Invalid_FirstName"/>
+  <parameter name="tcID" value="TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent"/>
   <parameter name="browserType" value="CHROME"/>
-  <test name="TC_PP_03_Verify_when_user_does_not_Pass_Mandatory_Invalid_FirstName">
+  <test name="TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent">
     <parameter name="appURL" value="http://localhost/airpay_php/transaction.html"/>
-    <parameter name="tcID" value="TC_PP_03_Verify_when_user_does_not_Pass_Mandatory_Invalid_FirstName"/>
+    <parameter name="tcID" value="TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent"/>
     <parameter name="browserType" value="CHROME"/>
     <classes>
-      <class name="com.Airpay.Tests.TC_PP_01"/>
+      <class name="com.Airpay.Tests.TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent"/>
     </classes>
-  </test> <!-- TC_PP_03_Verify_when_user_does_not_Pass_Mandatory_Invalid_FirstName -->
+  </test> <!-- TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent -->
 </suite> <!-- Failed suite [Airpay] -->
