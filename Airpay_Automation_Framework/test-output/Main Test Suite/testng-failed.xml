@@ -6,4 +6,13 @@
       <class name="com.Airpay.Utilities.Create_TestNGXML"/>
     </classes>
   </test> <!-- TestNG Test Group1 -->
+  <test name="TestNG Test Group1(failed)">
+    <classes>
+      <class name="com.Airpay.Utilities.Create_TestNGXML">
+        <methods>
+          <include name="createXMLfile"/>
+        </methods>
+      </class> <!-- com.Airpay.Utilities.Create_TestNGXML -->
+    </classes>
+  </test> <!-- TestNG Test Group1(failed) -->
 </suite> <!-- Failed suite [Main Test Suite] -->

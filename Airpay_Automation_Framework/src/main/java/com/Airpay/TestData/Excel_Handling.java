@@ -589,7 +589,7 @@ public static int sheet11;
 		 }
 	}	
 	
-	public String Put_Data_Replace(String TestCase,String ColumnHeader,String Value)
+	public static String Put_Data_Replace(String TestCase,String ColumnHeader,String Value)
 	{  
 		@SuppressWarnings("unchecked")
 		LinkedHashMap<String,String> TC=(LinkedHashMap<String,String>) TestData.get(TestCase);
@@ -602,8 +602,8 @@ public static int sheet11;
 		
 			
 		
-		 TC.put(ColumnHeader,Value) ;
-		 return "success";
+		 
+		 return TC.put(ColumnHeader,Value) ;
 	}	
 	public boolean setCellDataWithCondtion( String colName, String rowName,String rowValue, String data) {
 		try {

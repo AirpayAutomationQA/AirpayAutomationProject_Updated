@@ -860,6 +860,45 @@ public class AirPay_MA_Panel_Select_Merchant_BusinessLogic extends Airpay_Paymen
 
 		}
 	}
+	
+	
+	public String Verify_SurchargeFlag_Mode(String Xpath) throws Exception{
+		try{
+			if(Assert.isElementDisplayed(driver, Xpath, "RespectiveButton"))
+			{					
+				WebElement switchLabel = driver.findElement(By.xpath(Xpath));
+				String pseudo = ((JavascriptExecutor)driver)
+						.executeScript("return window.getComputedStyle(arguments[0]).getPropertyValue('right');",switchLabel).toString();		
+				System.out.println("sudo:"+pseudo);
+				if(pseudo.equalsIgnoreCase("47px"))
+				{
+					System.out.println("OFF Save Card");
+					Thread.sleep(5000);
+					Extent_Reporting.Log_Pass("ON Activated", "Passed");
+					Extent_Reporting.Log_report_img("ON Activate", "IMG", driver);
+					flag= "OFF";
+				}else if(pseudo.equalsIgnoreCase("0px"))
+				{					
+					System.out.println("ON Save Card");
+					Thread.sleep(5000);
+					Extent_Reporting.Log_Pass("OFF Activated", "Passed");
+					Extent_Reporting.Log_report_img("OFF Activate", "IMG", driver);
+					flag = "ON";
+				}else{
+					Extent_Reporting.Log_Fail("Save button does not exist", "Failed", driver);
+				}						
+			}else{
+
+				Extent_Reporting.Log_Fail("Respective text Does not exist" , "Failed", driver);
+			}
+			return flag;
+		}catch(Exception t){
+			t.printStackTrace();
+			Extent_Reporting.Log_Fail("Respective menu does not exost", "Failed", driver);
+			throw new Exception("Serch filter does not exist");
+
+		}
+	}
 
 	public void Verify_Surchagre_OFFVerify(String Xpath) throws Exception{
 		try{

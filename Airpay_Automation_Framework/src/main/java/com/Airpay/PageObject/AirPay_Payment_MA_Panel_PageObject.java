@@ -39,8 +39,8 @@ public class AirPay_Payment_MA_Panel_PageObject {
 	public static final String MM_PP_SaveCardchkbox ="//*[@class='save-Card-Check']";
 	
 	public static final String MM_ONOFFCheckBoxSaveCard ="(//label[@for='singleclick_flag' and @class='onoffswitch-label']/span//following::span)[1]";
-	
-	
+	public static final String MM_ONOFFCheckBoxSurchargeFlag ="(//label[@for='surcharge_flag' and @class='onoffswitch-label']/span//following::span)[1]";
+
 	
 //******************************************MA Panle Payment Mode URL Details locaters *********************************
 	
