@@ -1547,14 +1547,16 @@ public class AirPay_MA_Panel_Select_Merchant_BusinessLogic extends Airpay_Paymen
 
 		}
 	}
-
+	public static String AmtVal = null;
 	public void SummaryAmtVerify(String PassedVal) throws Exception{
-		try{
-
+		try{			
+			if(Excel_Handling.Get_Data(TC_ID, "Surcharge_Mode").contains("OFF"))
+			{		
+			
 			if(Assert.isElementDisplayed(driver, AirPay_Payment_MA_Panel_PageObject.TotAmt, "Passed Amount"))
 			{
 				Assert.Clickbtn(driver, "//div[@class='sumbtn desksumbtn iplus']", "Amount Plus button");			
-				String AmtVal = driver.findElement(By.xpath("//div[@class='main-amount-block show-amnt']//following::span[@id='total_amount']")).getText().trim();
+				 AmtVal = driver.findElement(By.xpath("//div[@class='main-amount-block show-amnt']//following::span[@id='total_amount']")).getText().trim();
 				System.out.println("Amounnt value: "+AmtVal);
 				if(AmtVal.contains(PassedVal)){
 					Extent_Reporting.Log_report_img("Passed Amount is exist", "Passed", driver);
@@ -1562,7 +1564,12 @@ public class AirPay_MA_Panel_Select_Merchant_BusinessLogic extends Airpay_Paymen
 				}else{
 					Extent_Reporting.Log_Fail("Amount didn't match", "Failed", driver);
 				}
-			}		
+			}
+			}else{
+				AmtVal = driver.findElement(By.xpath("//span[@class='final-amount']")).getText().trim();
+				Extent_Reporting.Log_report_img("Surcharge not applied", "Passed", driver);
+				Extent_Reporting.Log_Pass("Surcharge Amount not applied ", "Total Amount: "+AmtVal);
+			}	
 		}catch(Exception t){
 			t.printStackTrace();
 			Extent_Reporting.Log_Fail("Amount didn't match", "Failed", driver);

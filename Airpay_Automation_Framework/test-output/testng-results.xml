@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Airpay" duration-ms="129265" started-at="2019-02-21T08:12:45Z" finished-at="2019-02-21T08:14:55Z">
+  <suite name="Airpay" duration-ms="41209" started-at="2019-02-22T05:06:37Z" finished-at="2019-02-22T05:07:18Z">
     <groups>
     </groups>
-    <test name="TC_Verify_Surcharge_Mode_On_OFF" duration-ms="129265" started-at="2019-02-21T08:12:45Z" finished-at="2019-02-21T08:14:55Z">
-      <class name="com.Airpay.Tests.TC_Verify_Surcharge_Mode_On_OFF">
-        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Airpay.Tests.TC_Verify_Surcharge_Mode_On_OFF@3d7fa3ae]" name="initializeTestBaseSetup" is-config="true" duration-ms="9785" started-at="2019-02-21T13:42:45Z" finished-at="2019-02-21T13:42:55Z">
+    <test name="TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent" duration-ms="41209" started-at="2019-02-22T05:06:37Z" finished-at="2019-02-22T05:07:18Z">
+      <class name="com.Airpay.Tests.TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent">
+        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Airpay.Tests.TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent@43e101b4]" name="initializeTestBaseSetup" is-config="true" duration-ms="8476" started-at="2019-02-22T10:36:37Z" finished-at="2019-02-22T10:36:45Z">
           <params>
             <param index="0">
               <value>
@@ -21,26 +21,26 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[TC_Verify_Surcharge_Mode_On_OFF]]>
+                <![CDATA[TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTestBaseSetup -->
-        <test-method status="PASS" signature="setup()[pri:1, instance:com.Airpay.Tests.TC_Verify_Surcharge_Mode_On_OFF@3d7fa3ae]" name="setup" duration-ms="8" started-at="2019-02-21T13:42:55Z" finished-at="2019-02-21T13:42:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="TC_TestCaseName()[pri:2, instance:com.Airpay.Tests.TC_Verify_Surcharge_Mode_On_OFF@3d7fa3ae]" name="TC_TestCaseName" duration-ms="119304" started-at="2019-02-21T13:42:55Z" finished-at="2019-02-21T13:44:54Z">
+        <test-method status="PASS" signature="TC_TestCaseName()[pri:2, instance:com.Airpay.Tests.TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent@43e101b4]" name="TC_TestCaseName" duration-ms="32409" started-at="2019-02-22T10:36:45Z" finished-at="2019-02-22T10:37:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_TestCaseName -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.Airpay.Tests.TC_Verify_Surcharge_Mode_On_OFF@3d7fa3ae]" name="tearDown" is-config="true" duration-ms="151" started-at="2019-02-21T13:44:55Z" finished-at="2019-02-21T13:44:55Z">
+        <test-method status="PASS" signature="setup()[pri:1, instance:com.Airpay.Tests.TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent@43e101b4]" name="setup" duration-ms="0" started-at="2019-02-22T10:36:45Z" finished-at="2019-02-22T10:36:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.Airpay.Tests.TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent@43e101b4]" name="tearDown" is-config="true" duration-ms="324" started-at="2019-02-22T10:37:18Z" finished-at="2019-02-22T10:37:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.Airpay.Tests.TC_Verify_Surcharge_Mode_On_OFF -->
-    </test> <!-- TC_Verify_Surcharge_Mode_On_OFF -->
+      </class> <!-- com.Airpay.Tests.TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent -->
+    </test> <!-- TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent -->
   </suite> <!-- Airpay -->
 </testng-results>

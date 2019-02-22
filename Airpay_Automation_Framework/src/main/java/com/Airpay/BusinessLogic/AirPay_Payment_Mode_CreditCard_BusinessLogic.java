@@ -254,13 +254,21 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Assert.inputText(driver, CreditCardExpDate,Excel_Handling.Get_Data(TC_ID, "CardExpDate").trim(), "Credit card Number Exp Date");
 			Assert.inputText(driver, CreditCardCVVCode,Excel_Handling.Get_Data(TC_ID, "CardCVVCode").trim(), "Credit card Number CVVCode");
 			Extent_Reporting.Log_report_img("All details has been Entered", "Passed s", driver);
-			Assert.Clickbtn(driver, "//div[@class='sumbtn desksumbtn iplus']", "Amount Plus button");			
-			PassedAmt = driver.findElement(By.xpath("//div[@class='main-amount-block show-amnt']//following::span[@id='total_amount']")).getText().trim();
-			confFees = driver.findElement(By.xpath("(//*[@class='surcharge_amount'])[1]")).getText().trim();
-			TotAmt = driver.findElement(By.xpath("//span[@class='amount-value-block']")).getText().trim();
-			Extent_Reporting.Log_report_img("Surcharge filed snap", "Passed", driver);
-			Extent_Reporting.Log_Pass("Surcharge Amount: "+confFees, "Total Amount: "+TotAmt);
-			Assert.Clickbtn(driver, CreditCardMakePaymtBtn, "Credit Card make payment button");	
+			
+			if(Excel_Handling.Get_Data(TC_ID, "Surcharge_Mode").contains("OFF"))
+			{	
+				Assert.Clickbtn(driver, "//div[@class='sumbtn desksumbtn iplus']", "Amount Plus button");			
+				PassedAmt = driver.findElement(By.xpath("//div[@class='main-amount-block show-amnt']//following::span[@id='total_amount']")).getText().trim();
+				confFees = driver.findElement(By.xpath("(//*[@class='surcharge_amount'])[1]")).getText().trim();
+				TotAmt = driver.findElement(By.xpath("//span[@class='amount-value-block']")).getText().trim();
+				Extent_Reporting.Log_report_img("Surcharge filed snap", "Passed", driver);
+				Extent_Reporting.Log_Pass("Surcharge Amount: "+confFees, "Total Amount: "+TotAmt);
+			}else{
+				TotAmt = driver.findElement(By.xpath("//span[@class='final-amount']")).getText().trim();
+				Extent_Reporting.Log_report_img("Surcharge not applied", "Passed", driver);
+				Extent_Reporting.Log_Pass("Surcharge Amount not applied ", "Total Amount: "+TotAmt);
+			}	
+				Assert.Clickbtn(driver, CreditCardMakePaymtBtn, "Credit Card make payment button");	
 			Thread.sleep(10000);
 		}catch(Exception e)	
 		{
@@ -274,9 +282,16 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 	
 	public void AmountBlockFetchData() throws Exception{
 		try{
+		if(Excel_Handling.Get_Data(TC_ID, "Surcharge_Mode").contains("OFF"))
+		{
 			PassedAmt = driver.findElement(By.xpath("//div[@class='main-amount-block show-amnt']//following::span[@id='total_amount']")).getText().trim();
 			confFees = driver.findElement(By.xpath("(//*[@class='surcharge_amount'])[1]")).getText().trim();
 			TotAmt = driver.findElement(By.xpath("//span[@class='amount-value-block']")).getText().trim();
+		}else{
+			TotAmt = driver.findElement(By.xpath("//span[@class='final-amount']")).getText().trim();
+			Extent_Reporting.Log_report_img("Surcharge not applied", "Passed", driver);
+			Extent_Reporting.Log_Pass("Surcharge Amount not applied ", "Total Amount: "+TotAmt);
+		}	
 		}catch(Exception e)	
 		{
 			Extent_Reporting.Log_Fail("Some fields or else data issue is exist", "Failed", driver);   
