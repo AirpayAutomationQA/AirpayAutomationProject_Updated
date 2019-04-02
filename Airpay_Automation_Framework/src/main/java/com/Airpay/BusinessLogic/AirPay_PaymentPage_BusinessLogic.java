@@ -115,8 +115,6 @@ public class AirPay_PaymentPage_BusinessLogic extends Airpay_PaymentPage_PageObj
 			throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
-
-	
 	
 	/**
 	 * @author parmeshwar Sakole
@@ -809,8 +807,58 @@ public class AirPay_PaymentPage_BusinessLogic extends Airpay_PaymentPage_PageObj
 			Thread.sleep(2000);
 			if(Assert.isElementDisplayed(driver, LogoPaymentPage, "Logo payment page" ))
 			{         	
-				//Assert.Verify_Image(driver, ImgLogo, "Airpay Logo");
+				Assert.Verify_Image(driver, ImgLogo, "Airpay Logo");
 				Assert.isElementDisplayed(driver, airPayFavIcon, "Airpay Fav icon");
+				Extent_Reporting.Log_report_img("Respective Details is exist", "Passed", driver);
+			}else{
+				Extent_Reporting.Log_Fail("Logo payment page does not exis",	"Failed",driver);
+				Log.error("Local Host page not successfully displayed");
+				throw new Exception("option does not exist displayed");
+			}
+		}                     
+		catch(Exception e)	
+		{
+			Extent_Reporting.Log_Fail("Airpay Logo does not exist",	"Failed",driver);
+			Log.error("Airpay Logo does not exist does not exist");
+			e.printStackTrace();
+			throw new Exception("Test failed due to Airpay Logo does not displayed");
+		}
+	}
+	
+	public void Verify_Payment() throws Exception {
+		try{ 
+			Log.info("Navigating To Payment Page");	
+			Assert.waitForPageToLoad(driver);
+			Thread.sleep(2000);
+			if(Assert.isElementDisplayed(driver, LogoPaymentPage, "Logo payment page" ))
+			{         	
+				    //Assert.Verify_Image(driver, ImgLogo, " Logo");
+				Extent_Reporting.Log_report_img("Respective Details is exist", "Passed", driver);
+			}else{
+				Extent_Reporting.Log_Fail("Logo payment page does not exis",	"Failed",driver);
+				Log.error("Local Host page not successfully displayed");
+				throw new Exception("option does not exist displayed");
+			}
+		}                     
+		catch(Exception e)	
+		{
+			Extent_Reporting.Log_Fail("Airpay Logo does not exist",	"Failed",driver);
+			Log.error("Airpay Logo does not exist does not exist");
+			e.printStackTrace();
+			throw new Exception("Test failed due to Airpay Logo does not displayed");
+		}
+	}
+	
+	
+	
+	public void Verify_PaymentPageLogo() throws Exception {
+		try{ 
+			Log.info("Navigating To Payment Page");	
+			Assert.waitForPageToLoad(driver);
+			Thread.sleep(2000);
+			if(Assert.isElementDisplayed(driver, LogoPaymentPage, "Logo payment page" ))
+			{         	
+				Assert.Verify_Image(driver, ImgLogo, " Logo");
 				Extent_Reporting.Log_report_img("Respective Details is exist", "Passed", driver);
 			}else{
 				Extent_Reporting.Log_Fail("Logo payment page does not exis",	"Failed",driver);

@@ -4,6 +4,7 @@
     <test name="TestNG Test Group1">
         <classes>
         	<class name="com.Airpay.Utilities.Create_TestNGXML"/>
+        	
         </classes>
     </test>
 </suite>

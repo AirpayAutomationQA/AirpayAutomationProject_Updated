@@ -1,46 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Airpay" duration-ms="41209" started-at="2019-02-22T05:06:37Z" finished-at="2019-02-22T05:07:18Z">
+  <suite name="Main Test Suite" duration-ms="4147341" started-at="2019-03-25T11:42:18Z" finished-at="2019-03-25T12:51:26Z">
     <groups>
     </groups>
-    <test name="TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent" duration-ms="41209" started-at="2019-02-22T05:06:37Z" finished-at="2019-02-22T05:07:18Z">
-      <class name="com.Airpay.Tests.TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent">
-        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Airpay.Tests.TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent@43e101b4]" name="initializeTestBaseSetup" is-config="true" duration-ms="8476" started-at="2019-02-22T10:36:37Z" finished-at="2019-02-22T10:36:45Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[CHROME]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost/airpay_php/transaction.html]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent]]>
-              </value>
-            </param>
-          </params>
+    <test name="TestNG Test Group1" duration-ms="4147341" started-at="2019-03-25T11:42:18Z" finished-at="2019-03-25T12:51:26Z">
+      <class name="com.Airpay.Utilities.Create_TestNGXML">
+        <test-method status="PASS" signature="createXMLfile()[pri:0, instance:com.Airpay.Utilities.Create_TestNGXML@5622fdf]" name="createXMLfile" duration-ms="4147311" started-at="2019-03-25T17:12:18Z" finished-at="2019-03-25T18:21:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initializeTestBaseSetup -->
-        <test-method status="PASS" signature="TC_TestCaseName()[pri:2, instance:com.Airpay.Tests.TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent@43e101b4]" name="TC_TestCaseName" duration-ms="32409" started-at="2019-02-22T10:36:45Z" finished-at="2019-02-22T10:37:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_TestCaseName -->
-        <test-method status="PASS" signature="setup()[pri:1, instance:com.Airpay.Tests.TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent@43e101b4]" name="setup" duration-ms="0" started-at="2019-02-22T10:36:45Z" finished-at="2019-02-22T10:36:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.Airpay.Tests.TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent@43e101b4]" name="tearDown" is-config="true" duration-ms="324" started-at="2019-02-22T10:37:18Z" finished-at="2019-02-22T10:37:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.Airpay.Tests.TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent -->
-    </test> <!-- TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent -->
-  </suite> <!-- Airpay -->
+        </test-method> <!-- createXMLfile -->
+      </class> <!-- com.Airpay.Utilities.Create_TestNGXML -->
+    </test> <!-- TestNG Test Group1 -->
+  </suite> <!-- Main Test Suite -->
 </testng-results>

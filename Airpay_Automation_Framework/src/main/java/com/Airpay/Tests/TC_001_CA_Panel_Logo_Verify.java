@@ -26,7 +26,7 @@ public class TC_001_CA_Panel_Logo_Verify extends Driver_Setup{
 		try {
 			Log.info("Script Starts..");
 			AirPay_CAPanel_BusinessLogic CA_panel = new AirPay_CAPanel_BusinessLogic(driver, TC_ID);
-			CA_panel.CA_Panel_Login();
+			CA_panel.CA_Panel_Login();			
 			CA_panel.Verify_PaymentPageFields();
 			CA_panel.CA_Panel_Logout();
 			Log.info("Scripts Ends....");
