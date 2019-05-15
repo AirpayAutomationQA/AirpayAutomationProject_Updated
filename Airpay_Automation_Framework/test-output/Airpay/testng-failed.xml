@@ -2,14 +2,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Airpay]">
   <parameter name="appURL" value="http://localhost/airpay_php/transaction.html"/>
-  <parameter name="tcID" value="TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent"/>
+  <parameter name="tcID" value="TC_PP_09_Verify_AMEX_Credit_Red_line_errors"/>
   <parameter name="browserType" value="CHROME"/>
-  <test name="TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent">
+  <test name="TC_PP_09_Verify_AMEX_Credit_Red_line_errors">
     <parameter name="appURL" value="http://localhost/airpay_php/transaction.html"/>
-    <parameter name="tcID" value="TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent"/>
+    <parameter name="tcID" value="TC_PP_09_Verify_AMEX_Credit_Red_line_errors"/>
     <parameter name="browserType" value="CHROME"/>
     <classes>
-      <class name="com.Airpay.Tests.TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent"/>
+      <class name="com.Airpay.Tests.TC_PP_09_Amex_Credit_Card"/>
     </classes>
-  </test> <!-- TC_ID_Verify_Express_Payments_Forgot_Password_link_Sent -->
+  </test> <!-- TC_PP_09_Verify_AMEX_Credit_Red_line_errors -->
 </suite> <!-- Failed suite [Airpay] -->

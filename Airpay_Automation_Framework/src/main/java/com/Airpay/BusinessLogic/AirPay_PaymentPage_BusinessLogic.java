@@ -855,7 +855,7 @@ public class AirPay_PaymentPage_BusinessLogic extends Airpay_PaymentPage_PageObj
 		try{ 
 			Log.info("Navigating To Payment Page");	
 			Assert.waitForPageToLoad(driver);
-			Thread.sleep(2000);
+			Thread.sleep(5000);
 			if(Assert.isElementDisplayed(driver, LogoPaymentPage, "Logo payment page" ))
 			{         	
 				Assert.Verify_Image(driver, ImgLogo, " Logo");

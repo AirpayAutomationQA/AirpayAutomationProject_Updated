@@ -1,17 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Main Test Suite" duration-ms="4147341" started-at="2019-03-25T11:42:18Z" finished-at="2019-03-25T12:51:26Z">
+  <suite name="Airpay" duration-ms="34048" started-at="2019-05-06T06:40:38Z" finished-at="2019-05-06T06:41:12Z">
     <groups>
     </groups>
-    <test name="TestNG Test Group1" duration-ms="4147341" started-at="2019-03-25T11:42:18Z" finished-at="2019-03-25T12:51:26Z">
-      <class name="com.Airpay.Utilities.Create_TestNGXML">
-        <test-method status="PASS" signature="createXMLfile()[pri:0, instance:com.Airpay.Utilities.Create_TestNGXML@5622fdf]" name="createXMLfile" duration-ms="4147311" started-at="2019-03-25T17:12:18Z" finished-at="2019-03-25T18:21:26Z">
+    <test name="TC_PP_09_Verify_AMEX_Credit_Red_line_errors" duration-ms="34048" started-at="2019-05-06T06:40:38Z" finished-at="2019-05-06T06:41:12Z">
+      <class name="com.Airpay.Tests.TC_PP_09_Amex_Credit_Card">
+        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Airpay.Tests.TC_PP_09_Amex_Credit_Card@48301bfe]" name="initializeTestBaseSetup" is-config="true" duration-ms="8638" started-at="2019-05-06T12:10:38Z" finished-at="2019-05-06T12:10:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CHROME]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://localhost/airpay_php/transaction.html]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[TC_PP_09_Verify_AMEX_Credit_Red_line_errors]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createXMLfile -->
-      </class> <!-- com.Airpay.Utilities.Create_TestNGXML -->
-    </test> <!-- TestNG Test Group1 -->
-  </suite> <!-- Main Test Suite -->
+        </test-method> <!-- initializeTestBaseSetup -->
+        <test-method status="PASS" signature="TC_TestCaseName()[pri:2, instance:com.Airpay.Tests.TC_PP_09_Amex_Credit_Card@48301bfe]" name="TC_TestCaseName" duration-ms="25235" started-at="2019-05-06T12:10:47Z" finished-at="2019-05-06T12:11:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_TestCaseName -->
+        <test-method status="PASS" signature="setup()[pri:1, instance:com.Airpay.Tests.TC_PP_09_Amex_Credit_Card@48301bfe]" name="setup" duration-ms="0" started-at="2019-05-06T12:10:47Z" finished-at="2019-05-06T12:10:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.Airpay.Tests.TC_PP_09_Amex_Credit_Card@48301bfe]" name="tearDown" is-config="true" duration-ms="174" started-at="2019-05-06T12:11:12Z" finished-at="2019-05-06T12:11:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.Airpay.Tests.TC_PP_09_Amex_Credit_Card -->
+    </test> <!-- TC_PP_09_Verify_AMEX_Credit_Red_line_errors -->
+  </suite> <!-- Airpay -->
 </testng-results>

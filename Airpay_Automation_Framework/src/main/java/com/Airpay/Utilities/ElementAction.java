@@ -1898,18 +1898,18 @@ public void inputTextwithClick(WebDriver screenName,String ObjectxPath,String sV
 			            System.out.println("Image not displayed.");
 						Extent_Reporting.Log_Fail(Element_Name+" does not Exist",Element_Name+" does not Exist", screenName);
 			        }
-			        else
+			       /* else
 			        {
 			            System.out.println("Image displayed.");
 						Extent_Reporting.Log_Pass(Element_Name+" exist",Element_Name+" As expected");
 						Extent_Reporting.Log_report_img("Respective Image is exist", "Image", screenName);
-			        }								
+			        }		*/						
 					return ImageFile.getAttribute("src");
 				}
 				catch(Throwable t)
 				{ 
-					Extent_Reporting.Log_Fail(Element_Name+" does not Exist",Element_Name+" does not Exist", screenName);
-					t.printStackTrace();
+					//Extent_Reporting.Log_Fail(Element_Name+" does not Exist",Element_Name+" does not Exist", screenName);
+					//t.printStackTrace();
 					throw new Exception("Image Not Present");
 				}
 		}

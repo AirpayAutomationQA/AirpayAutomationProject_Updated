@@ -27,6 +27,7 @@ public class TC_PaymentPage_Logo_Verify extends Driver_Setup{
 			Log.info("Script Starts..");
 			AirPay_PaymentPage_BusinessLogic AirPay_Local = new AirPay_PaymentPage_BusinessLogic(driver, TC_ID);				
 				AirPay_Local.LocalHostDetailPage_ErrorVerify();	
+				Thread.sleep(5000);
 				AirPay_Local.Verify_PaymentPageLogo();	
 				driver.quit();
 				Log.info("Scripts Ends....");
