@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Airpay" duration-ms="34048" started-at="2019-05-06T06:40:38Z" finished-at="2019-05-06T06:41:12Z">
+  <suite name="Airpay" duration-ms="217698" started-at="2019-05-30T10:38:35Z" finished-at="2019-05-30T10:42:13Z">
     <groups>
     </groups>
-    <test name="TC_PP_09_Verify_AMEX_Credit_Red_line_errors" duration-ms="34048" started-at="2019-05-06T06:40:38Z" finished-at="2019-05-06T06:41:12Z">
-      <class name="com.Airpay.Tests.TC_PP_09_Amex_Credit_Card">
-        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Airpay.Tests.TC_PP_09_Amex_Credit_Card@48301bfe]" name="initializeTestBaseSetup" is-config="true" duration-ms="8638" started-at="2019-05-06T12:10:38Z" finished-at="2019-05-06T12:10:47Z">
+    <test name="TC_PP_NetBanking_Banking_popular_bank_verification" duration-ms="217698" started-at="2019-05-30T10:38:35Z" finished-at="2019-05-30T10:42:13Z">
+      <class name="com.Airpay.Tests.TC_PP_NetBanking_Banking_popular_bank_verification">
+        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Airpay.Tests.TC_PP_NetBanking_Banking_popular_bank_verification@560c326f]" name="initializeTestBaseSetup" is-config="true" duration-ms="2351" started-at="2019-05-30T16:08:35Z" finished-at="2019-05-30T16:08:37Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[CHROME]]>
+                <![CDATA[IE]]>
               </value>
             </param>
             <param index="1">
@@ -21,26 +21,26 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[TC_PP_09_Verify_AMEX_Credit_Red_line_errors]]>
+                <![CDATA[TC_PP_NetBanking_Banking_popular_bank_verification]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTestBaseSetup -->
-        <test-method status="PASS" signature="TC_TestCaseName()[pri:2, instance:com.Airpay.Tests.TC_PP_09_Amex_Credit_Card@48301bfe]" name="TC_TestCaseName" duration-ms="25235" started-at="2019-05-06T12:10:47Z" finished-at="2019-05-06T12:11:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_TestCaseName -->
-        <test-method status="PASS" signature="setup()[pri:1, instance:com.Airpay.Tests.TC_PP_09_Amex_Credit_Card@48301bfe]" name="setup" duration-ms="0" started-at="2019-05-06T12:10:47Z" finished-at="2019-05-06T12:10:47Z">
+        <test-method status="PASS" signature="setup()[pri:1, instance:com.Airpay.Tests.TC_PP_NetBanking_Banking_popular_bank_verification@560c326f]" name="setup" duration-ms="0" started-at="2019-05-30T16:08:37Z" finished-at="2019-05-30T16:08:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.Airpay.Tests.TC_PP_09_Amex_Credit_Card@48301bfe]" name="tearDown" is-config="true" duration-ms="174" started-at="2019-05-06T12:11:12Z" finished-at="2019-05-06T12:11:12Z">
+        <test-method status="PASS" signature="TC_TestCaseName()[pri:2, instance:com.Airpay.Tests.TC_PP_NetBanking_Banking_popular_bank_verification@560c326f]" name="TC_TestCaseName" duration-ms="215330" started-at="2019-05-30T16:08:37Z" finished-at="2019-05-30T16:12:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_TestCaseName -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.Airpay.Tests.TC_PP_NetBanking_Banking_popular_bank_verification@560c326f]" name="tearDown" is-config="true" duration-ms="17" started-at="2019-05-30T16:12:13Z" finished-at="2019-05-30T16:12:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.Airpay.Tests.TC_PP_09_Amex_Credit_Card -->
-    </test> <!-- TC_PP_09_Verify_AMEX_Credit_Red_line_errors -->
+      </class> <!-- com.Airpay.Tests.TC_PP_NetBanking_Banking_popular_bank_verification -->
+    </test> <!-- TC_PP_NetBanking_Banking_popular_bank_verification -->
   </suite> <!-- Airpay -->
 </testng-results>

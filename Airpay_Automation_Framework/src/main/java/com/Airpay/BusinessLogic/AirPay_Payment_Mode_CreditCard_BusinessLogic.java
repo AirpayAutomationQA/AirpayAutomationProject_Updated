@@ -112,8 +112,11 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 				Assert.inputText(driver, Order_Id, Excel_Handling.Get_Data(TC_ID, "Order_Id"), "Order_Id");
 				Assert.inputText(driver, Amount, Excel_Handling.Get_Data(TC_ID, "Amount"), "Amount");
 				Extent_Reporting.Log_report_img("Local Host page required field filled", "Passed", driver);
-				Assert.Clickbtn(driver, payHerebtn, "Pay Here");            
-				String errVerfiy = driver.findElement(By.xpath("//span[@class='alert alert-error']")).getText();
+				Assert.Clickbtn(driver, payHerebtn, "Pay Here");  
+				Thread.sleep(5000);
+				String errVerfiy = driver.findElement(By.xpath("//span[@class='alert alert-error']")).getText().trim();
+																	
+				
 				if(errVerfiy.contains("Either email or contact number is mandatory") || errVerfiy.contains("Invalid Order Id") ||errVerfiy.contains("Invalid Contact No") ||errVerfiy.contains("Wrong Checksum")
 						||errVerfiy.contains("Invalid Email Id") ||errVerfiy.contains("Invalid Amount")|| errVerfiy.contains("Transaction Update Failed - Merchant Transaction Id not valid")
 						|| errVerfiy.contains("Invalid First Name")||errVerfiy.contains("Invalid Last Name")||errVerfiy.contains("Invalid Pincode")
@@ -981,15 +984,17 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			driver.getTitle();
 			keyboard.pressKey(Keys.F12);
 			keyboard.releaseKey(Keys.F12);
-			Assert.inputText(driver, UTRCode, Excel_Handling.Get_Data(TC_ID, "UTRCode").trim(), "UTR Unique code ");
+			//Assert.inputText(driver, UTRCode, Excel_Handling.Get_Data(TC_ID, "UTRCode").trim(), "UTR Unique code ");
 			//AmountBlockFetchData();
 			AirPay_Payment_Mode_Debit_Card_BusinessLogic obj = new AirPay_Payment_Mode_Debit_Card_BusinessLogic(driver, TC_ID); 
 			obj.SurchargeForCommonFunctionNotclickplus();
+			Assert.Clickbtn(driver, UTRCashMakePayment, "UTR make payment"); 
+			Thread.sleep(5000);
 			Assert.Clickbtn(driver, UTRCashMakePayment, "UTR make payment");    
+
 			Assert.analyzeLog(driver);			
-		}catch(Exception e) 
-		{
-			Extent_Reporting.Log_Fail("Some fields are not disp", "Failed", driver);   
+		}catch(Exception e) {
+				Extent_Reporting.Log_Fail("Some fields are not disp", "Failed", driver);   
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
 			throw new Exception("Test failed due to local host page not displayed");

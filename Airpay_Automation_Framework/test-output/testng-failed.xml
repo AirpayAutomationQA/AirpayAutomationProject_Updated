@@ -2,14 +2,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Airpay]">
   <parameter name="appURL" value="http://localhost/airpay_php/transaction.html"/>
-  <parameter name="tcID" value="TC_PP_09_Verify_AMEX_Credit_Red_line_errors"/>
-  <parameter name="browserType" value="CHROME"/>
-  <test name="TC_PP_09_Verify_AMEX_Credit_Red_line_errors">
+  <parameter name="tcID" value="TC_PP_NetBanking_Banking_popular_bank_verification"/>
+  <parameter name="browserType" value="IE"/>
+  <test name="TC_PP_NetBanking_Banking_popular_bank_verification">
     <parameter name="appURL" value="http://localhost/airpay_php/transaction.html"/>
-    <parameter name="tcID" value="TC_PP_09_Verify_AMEX_Credit_Red_line_errors"/>
-    <parameter name="browserType" value="CHROME"/>
+    <parameter name="tcID" value="TC_PP_NetBanking_Banking_popular_bank_verification"/>
+    <parameter name="browserType" value="IE"/>
     <classes>
-      <class name="com.Airpay.Tests.TC_PP_09_Amex_Credit_Card"/>
+      <class name="com.Airpay.Tests.TC_PP_NetBanking_Banking_popular_bank_verification"/>
     </classes>
-  </test> <!-- TC_PP_09_Verify_AMEX_Credit_Red_line_errors -->
+  </test> <!-- TC_PP_NetBanking_Banking_popular_bank_verification -->
 </suite> <!-- Failed suite [Airpay] -->

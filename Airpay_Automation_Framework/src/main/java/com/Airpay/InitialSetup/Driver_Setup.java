@@ -36,6 +36,10 @@ public class Driver_Setup {
 		case "FIREFOX":
 			driver = initfirefoxDriver(appURL);
 			break;
+			
+		case "SAFARI":
+			driver = initfirefoxDriver(appURL);
+			break;	
 
 		default :
 			System.out.println("you have enetered as invalid browser");
