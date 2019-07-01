@@ -78,7 +78,7 @@ public class Airpay_PaymentPage_PageObject {
 		
 		
 	//********************************* Cash Test case ***********************************************
-		public static final String CashPinCode = "//*[@class='form-control cash_pincode']";
+		public static final String CashPinCode = "//*[contains(@class,'form-control cash_pincode')]";
 		public static final String CashPincodeErrLine ="(//*[contains(@class,'formDom form-group errorvalue')])[1]";
 		public static final String UPICommoneErrLine ="(//*[contains(@class,'formDom form-group errorvalue')])[2]";
 
