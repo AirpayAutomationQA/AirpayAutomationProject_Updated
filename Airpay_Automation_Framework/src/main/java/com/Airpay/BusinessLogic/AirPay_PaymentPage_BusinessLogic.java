@@ -196,6 +196,7 @@ public class AirPay_PaymentPage_BusinessLogic extends Airpay_PaymentPage_PageObj
 	 */
 	public void ExpressPaymentPWDRedLineErrorVerify() throws Exception {
 		try{ 
+			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);		
 			Log.info("Navigating To Local Host page of Payment");	   
 			if(Assert.isElementDisplay(driver, AirPay_Payment_MA_Panel_PageObject.ExpressPaymentPwdLink))
 			{ 
@@ -246,7 +247,6 @@ public class AirPay_PaymentPage_BusinessLogic extends Airpay_PaymentPage_PageObj
 			{ 
 				Log.debug("Local Host page");
 				Assert.Clickbtn(driver, AirPay_Payment_MA_Panel_PageObject.ExpressPaymentPwdLink, "Express PWD Link");
-				Thread.sleep(10000);
 				Assert.Clickbtn(driver, AirPay_Payment_MA_Panel_PageObject.ExpressPaymentForgetPWDLink, "submit button");
 				Assert.waitForPageToLoad(driver);
 				Thread.sleep(10000);
