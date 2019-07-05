@@ -7,11 +7,14 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.Airpay.PageObject.AirPay_Payment_MA_Panel_PageObject;
 import com.Airpay.PageObject.Airpay_PaymentPage_PageObject;
@@ -966,14 +969,28 @@ public class AirPay_PaymentPage_BusinessLogic extends Airpay_PaymentPage_PageObj
 			throw new Exception("Test failed due to Airpay Logo does not displayed");
 		}
 	}
+	public void accepting_alert()
+	{
+		try{
+			   //Wait 10 seconds till alert is present
+			   WebDriverWait wait = new WebDriverWait(driver, 10);
+			   Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 
+			   //Accepting alert.
+			   alert.accept();
+			   System.out.println("Accepted the alert successfully.");
+			}catch(Throwable e){
+			   System.err.println("Error came while waiting for the alert popup. "+e.getMessage());
+			}
+	}
 
 	public void BankPage_validation() throws Exception {
 		try{ 
 			Log.info("Navigating To Net Banking Page");	
 			JavascriptExecutor js = (JavascriptExecutor) driver;
+			accepting_alert();
 			String domain = (String) js.executeScript("return document.domain");
-			driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);			 			 
+			driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
 			if(domain.equals("") || domain.equals("payments.airpay.co.in")||(driver.getPageSource().contains("Error Page Exception"))==true
 					||(driver.getPageSource().contains("Internal Server Error"))==true|| driver.getTitle().contains("HTTP Status - 400"))
 			{			 
