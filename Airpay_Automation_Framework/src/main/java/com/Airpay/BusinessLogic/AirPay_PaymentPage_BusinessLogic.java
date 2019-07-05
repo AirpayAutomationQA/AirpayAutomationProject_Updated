@@ -980,7 +980,7 @@ public class AirPay_PaymentPage_BusinessLogic extends Airpay_PaymentPage_PageObj
 			   alert.accept();
 			   System.out.println("Accepted the alert successfully.");
 			}catch(Throwable e){
-			   System.err.println("Error came while waiting for the alert popup. "+e.getMessage());
+			   System.err.println("No Alert pop up. "+e.getMessage());
 			}
 	}
 
