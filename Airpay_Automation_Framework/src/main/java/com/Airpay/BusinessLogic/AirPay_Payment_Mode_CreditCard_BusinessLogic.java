@@ -937,8 +937,8 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Assert.inputText(driver, CashPinCode, Excel_Handling.Get_Data(TC_ID, "Pin_Code").trim(), "Cash payment pin code");
 			AirPay_Payment_Mode_Debit_Card_BusinessLogic obj = new AirPay_Payment_Mode_Debit_Card_BusinessLogic(driver, TC_ID); 
 			obj.SurchargeForCommonFunctionNotclickplus();
-			Assert.Clickbtn(driver, CashMakePayment, "Credit Card make payment button");  
-			URL connectURL = new URL("http://localhost/airpay_php/responsefromairpay.php");
+			Assert.Clickbtn(driver, CashMakePayment, " Make payment button");  
+			URL connectURL = new URL("http://localhost/airpay_php_live/responsefromairpay.php");
 			BufferedReader in = new BufferedReader(
 					new InputStreamReader(connectURL.openStream()));
 			String inputLine;
@@ -989,9 +989,8 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			AirPay_Payment_Mode_Debit_Card_BusinessLogic obj = new AirPay_Payment_Mode_Debit_Card_BusinessLogic(driver, TC_ID); 
 			obj.SurchargeForCommonFunctionNotclickplus();
 			Assert.Clickbtn(driver, UTRCashMakePayment, "UTR make payment"); 
-			Thread.sleep(5000);
-			Assert.Clickbtn(driver, UTRCashMakePayment, "UTR make payment");    
-
+			Thread.sleep(9000);
+			//Assert.Clickbtn(driver, UTRCashMakePayment, "UTR make payment");  
 			Assert.analyzeLog(driver);			
 		}catch(Exception e) {
 				Extent_Reporting.Log_Fail("Some fields are not disp", "Failed", driver);   
