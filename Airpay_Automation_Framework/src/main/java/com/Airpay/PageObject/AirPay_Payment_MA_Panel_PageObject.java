@@ -205,7 +205,7 @@ public class AirPay_Payment_MA_Panel_PageObject {
 	public static final String ExpressPaymentCardSaves ="//*[@class='mobsvdcard dsksvdcard svdslider']//following::div[contains(@class,'saved-card-wrap')]";
 	
 	public static final String ExpressPaymentsPWDErrorcode ="//*[contains(@class,'formDom form-group errorvalue')]";
-	public static final String ExpressPaymentForgetPWDLink ="//a[@class='float-right frgt-pswd']";
+	public static final String ExpressPaymentForgetPWDLink ="//a[contains(@class,'float-right frgt-pswd')]";
 	//public static final String ExpressPaymentForgetPWDLinkSent
 
 	
