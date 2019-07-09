@@ -990,7 +990,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			obj.SurchargeForCommonFunctionNotclickplus();
 			Assert.Clickbtn(driver, UTRCashMakePayment, "UTR make payment"); 
 			Thread.sleep(9000);
-			Assert.Clickbtn(driver, UTRCashMakePayment, "UTR make payment");  
+			Assert.Clickbtn(driver, UTRCashMakePayment1, "UTR make payment");  
 			Assert.analyzeLog(driver);			
 		}catch(Exception e) {
 				Extent_Reporting.Log_Fail("Some fields are not disp", "Failed", driver);   
