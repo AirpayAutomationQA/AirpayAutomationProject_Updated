@@ -98,7 +98,8 @@ public class Airpay_PaymentPage_PageObject {
 		
 	//********************************* RTGS and NEFT **************************************************
 		public static final String UTRCode = "//*[@class='form-control utr-validation']";
-		public static final String UTRCashMakePayment = "//*[@class='btn virtual-acc-details rtgsfrm']" ;  //"//*[@class='btn rtgs-form']";
+		public static final String UTRCashMakePayment = "//*[@class='btn virtual-acc-details rtgsfrm']" ;//"//*[@class='btn rtgs-form']";
+		public static final String UTRCashMakePayment1 = "//*[@class='btn virtual-bank-details rtgsfrm']" ;
 		
 	//********************************** Moto transaction ****************************************
 		//public static final String 
