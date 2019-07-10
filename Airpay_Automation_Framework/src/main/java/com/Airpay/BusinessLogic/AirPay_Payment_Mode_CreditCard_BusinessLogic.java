@@ -1151,8 +1151,14 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 		try{
 			Assert.waitForPageToLoad(driver);
 			Assert.Clickbtn(driver, UTRCashMakePayment, "UTR make button");
-			System.out.println("This is executed");
+			System.out.println("This is executed!!!");
+			Thread.sleep(32000);
 			Assert.Clickbtn(driver, UTRCashMakePayment1, "UTR make button");
+			if(driver.getCurrentUrl()=="http://localhost/airpay_php_live/responsefromairpay.php")
+			{
+				Extent_Reporting.Log_Pass("UTR trasnaction success", "Passed");
+				Extent_Reporting.Log_report_img("UTR trasnaction success", "Passed", driver);
+			}
 			/*			if(Assert.isElementDisplay(driver, CashPincodeErrLine)){
 				Assert.isElementDisplayed(driver, CashPincodeErrLine, "UTR Red line Error is exist");
 				Extent_Reporting.Log_Pass("Pin code red line error is exist as expected", "Passed");
