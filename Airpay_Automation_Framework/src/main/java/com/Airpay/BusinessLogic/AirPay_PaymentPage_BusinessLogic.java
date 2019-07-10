@@ -1003,11 +1003,35 @@ public class AirPay_PaymentPage_BusinessLogic extends Airpay_PaymentPage_PageObj
 			}
 		}catch(Exception e)	
 		{
-			Extent_Reporting.Log_Fail(" Make payment button does not exist for net banking",	"Failed",driver);
+			Extent_Reporting.Log_Fail(" Make payment button does not exist for net banking","Failed",driver);
 			Log.error("Test failed due to card does not exist");
 			e.printStackTrace();
 		}
 	} 
+	public void BankPage_validation_cards() throws Exception {
+		try{ 
+			Log.info("Navigating To Card details Banking Page");	
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			accepting_alert();
+			String domain = (String) js.executeScript("return document.domain");
+			driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
+			if(domain.equals("") || domain.equals("payments.airpay.co.in")||(driver.getPageSource().contains("Error Page Exception"))==true
+					||(driver.getPageSource().contains("Internal Server Error"))==true|| driver.getTitle().contains("HTTP Status - 400"))
+			{			 
+				Extent_Reporting.Log_Fail("Its not navigated to Respective Bank as the card details failed", "Error Snap", driver);
+				Log.error("Its not navigated to Respective Bank as :"+bankName);
+			}else{
+				Extent_Reporting.Log_Pass("Its Navigated to :"+bankName, "Passed");
+				Extent_Reporting.Log_report_img("Its Navigated to respective bank" , "Passed", driver);
+				Thread.sleep(2000);
+			}
+		}catch(Exception e)	
+		{
+			Extent_Reporting.Log_Fail(" Make payment button does not exist for net banking","Failed",driver);
+			Log.error("Test failed due to card does not exist");
+			e.printStackTrace();
+		}
+	}
 
 	public void NavigateToLocalHostPage() throws Exception {
 		try{ 
