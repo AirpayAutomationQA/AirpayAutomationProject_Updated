@@ -1150,8 +1150,10 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 	public void Cash_UTRRedLineError() throws Exception{
 		try{
 			Assert.waitForPageToLoad(driver);
-			Assert.Clickbtn(driver, UTRCashMakePayment, "UTR make button");    
-			if(Assert.isElementDisplay(driver, CashPincodeErrLine)){
+			Assert.Clickbtn(driver, UTRCashMakePayment, "UTR make button");
+			System.out.println("This is executed");
+			Assert.Clickbtn(driver, UTRCashMakePayment1, "UTR make button");
+			/*			if(Assert.isElementDisplay(driver, CashPincodeErrLine)){
 				Assert.isElementDisplayed(driver, CashPincodeErrLine, "UTR Red line Error is exist");
 				Extent_Reporting.Log_Pass("Pin code red line error is exist as expected", "Passed");
 				Extent_Reporting.Log_report_img("Red line error screen print", "Passed", driver);
@@ -1159,9 +1161,10 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			}else{
 				Extent_Reporting.Log_Fail("Cash Payment Transaction success Message does not exist", "Failed", driver);
 				throw new Exception("Test failed due to local host page not displayed");
-			}
+			}*/
 
-		}catch(Exception e) 
+		}
+			catch(Exception e) 
 		{
 			Extent_Reporting.Log_Fail("Cash Payment Transaction success Message does not exist", "Failed", driver);
 			Log.error("Test failed due to page is navigating to payment page");
