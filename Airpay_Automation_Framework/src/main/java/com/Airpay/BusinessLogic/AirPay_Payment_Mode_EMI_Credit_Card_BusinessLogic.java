@@ -274,7 +274,8 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 						||errMsg.contains("Transaction Operation Failed - Card No, not valid. Card Number Verification Failed") 		                    
 						||errMsg.contains("Please use a valid debit card issued in india")|| errMsg.contains("Improper Card Name Entered")
 						||errMsg.contains("Credit Card Number is Empty")||errMsg.contains("We are sorry but the transaction failed. Try paying using another method")
-						|| errMsg.contains("This card is not valid for selected bank.")){	
+						|| errMsg.contains("This card is not valid for selected bank.")
+						|| errMsg.contains("Cancelled by user. Please try paying using another method?")){	
 					Extent_Reporting.Log_Pass("Repective Error Message is exist", "Error Msg is:"+errMsg);
 					Extent_Reporting.Log_report_img("Respective Error Message is exist", "Passed", driver);		    	 
 				}else{
