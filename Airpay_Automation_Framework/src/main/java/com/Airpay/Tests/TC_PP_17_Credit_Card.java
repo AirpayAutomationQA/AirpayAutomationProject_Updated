@@ -33,7 +33,8 @@ public class TC_PP_17_Credit_Card extends Driver_Setup{
 				AirPay_Local.Verify_PaymentPageFields();
 				AirPay_Local.Card_Details_Options();
 				CreditCard.Credit_cardProvidingValuesWithValidCardNumber();	
-				AirPay_Local.BankPage_validation();
+				//AirPay_Local.BankPage_validation();
+				AirPay_Local.BankPage_validation_cards();
 				//CreditCard.Card_InvalidMesgVerify();
 			Log.info("Scripts Ends....");
 		} catch (Exception e) {

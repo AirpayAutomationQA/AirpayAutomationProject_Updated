@@ -1020,7 +1020,8 @@ public class AirPay_PaymentPage_BusinessLogic extends Airpay_PaymentPage_PageObj
 			{			 
 				Extent_Reporting.Log_Fail("Its not navigated to Respective Bank as the card details failed", "Error Snap", driver);
 				Log.error("Its not navigated to Respective Bank as :"+bankName);
-			}else{
+			}
+			else{
 				Extent_Reporting.Log_Pass("Its Navigated to :"+bankName, "Passed");
 				Extent_Reporting.Log_report_img("Its Navigated to respective bank" , "Passed", driver);
 				Thread.sleep(2000);

@@ -371,8 +371,9 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 			Extent_Reporting.Log_report_img("AmexeZeClick is exist as expected", "Passed", driver);
 			AirPay_Payment_Mode_Debit_Card_BusinessLogic obj = new AirPay_Payment_Mode_Debit_Card_BusinessLogic(driver, TC_ID); 
 			obj.SurchargeForCommonFunctionNotclickplus();
-			Assert.Clickbtn(driver, virtualAccounttBtn, "make payment");	
-			Thread.sleep(2000);
+			Assert.Clickbtn(driver, UTRCashMakePayment, "VA make payment"); 
+			Thread.sleep(9000);
+			Assert.Clickbtn(driver, UTRCashMakePayment1, "VA make payment");  
 			Assert.waitForPageToLoad(driver);
 		}catch(Exception e)	
 		{

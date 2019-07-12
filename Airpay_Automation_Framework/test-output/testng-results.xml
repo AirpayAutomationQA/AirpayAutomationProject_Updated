@@ -1,46 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Airpay" duration-ms="217698" started-at="2019-05-30T10:38:35Z" finished-at="2019-05-30T10:42:13Z">
+  <suite name="Main Test Suite" duration-ms="137805" started-at="2019-07-12T10:11:20Z" finished-at="2019-07-12T10:13:38Z">
     <groups>
     </groups>
-    <test name="TC_PP_NetBanking_Banking_popular_bank_verification" duration-ms="217698" started-at="2019-05-30T10:38:35Z" finished-at="2019-05-30T10:42:13Z">
-      <class name="com.Airpay.Tests.TC_PP_NetBanking_Banking_popular_bank_verification">
-        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Airpay.Tests.TC_PP_NetBanking_Banking_popular_bank_verification@560c326f]" name="initializeTestBaseSetup" is-config="true" duration-ms="2351" started-at="2019-05-30T16:08:35Z" finished-at="2019-05-30T16:08:37Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[IE]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://localhost/airpay_php/transaction.html]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[TC_PP_NetBanking_Banking_popular_bank_verification]]>
-              </value>
-            </param>
-          </params>
+    <test name="TestNG Test Group1" duration-ms="137805" started-at="2019-07-12T10:11:20Z" finished-at="2019-07-12T10:13:38Z">
+      <class name="com.Airpay.Utilities.Create_TestNGXML">
+        <test-method status="PASS" signature="createXMLfile()[pri:0, instance:com.Airpay.Utilities.Create_TestNGXML@4eb7f003]" name="createXMLfile" duration-ms="137774" started-at="2019-07-12T10:11:20Z" finished-at="2019-07-12T10:13:38Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initializeTestBaseSetup -->
-        <test-method status="PASS" signature="setup()[pri:1, instance:com.Airpay.Tests.TC_PP_NetBanking_Banking_popular_bank_verification@560c326f]" name="setup" duration-ms="0" started-at="2019-05-30T16:08:37Z" finished-at="2019-05-30T16:08:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="TC_TestCaseName()[pri:2, instance:com.Airpay.Tests.TC_PP_NetBanking_Banking_popular_bank_verification@560c326f]" name="TC_TestCaseName" duration-ms="215330" started-at="2019-05-30T16:08:37Z" finished-at="2019-05-30T16:12:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_TestCaseName -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.Airpay.Tests.TC_PP_NetBanking_Banking_popular_bank_verification@560c326f]" name="tearDown" is-config="true" duration-ms="17" started-at="2019-05-30T16:12:13Z" finished-at="2019-05-30T16:12:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.Airpay.Tests.TC_PP_NetBanking_Banking_popular_bank_verification -->
-    </test> <!-- TC_PP_NetBanking_Banking_popular_bank_verification -->
-  </suite> <!-- Airpay -->
+        </test-method> <!-- createXMLfile -->
+      </class> <!-- com.Airpay.Utilities.Create_TestNGXML -->
+    </test> <!-- TestNG Test Group1 -->
+  </suite> <!-- Main Test Suite -->
 </testng-results>
