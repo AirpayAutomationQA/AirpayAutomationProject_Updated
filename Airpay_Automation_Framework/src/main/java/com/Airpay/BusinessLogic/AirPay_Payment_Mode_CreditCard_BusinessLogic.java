@@ -938,14 +938,15 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			AirPay_Payment_Mode_Debit_Card_BusinessLogic obj = new AirPay_Payment_Mode_Debit_Card_BusinessLogic(driver, TC_ID); 
 			obj.SurchargeForCommonFunctionNotclickplus();
 			Assert.Clickbtn(driver, CashMakePayment, " Make payment button");  
-			URL connectURL = new URL("http://localhost/airpay_php_live/responsefromairpay.php");
-			BufferedReader in = new BufferedReader(
-					new InputStreamReader(connectURL.openStream()));
-			String inputLine;
-			while ((inputLine = in.readLine()) != null)
-				System.out.println(inputLine);
-			in.close();
-			Assert.analyzeLog(driver);
+			//commented below code for reading page source
+			/*
+			 * URL connectURL = new
+			 * URL("http://localhost/airpay_php_live/responsefromairpay.php");
+			 * BufferedReader in = new BufferedReader( new
+			 * InputStreamReader(connectURL.openStream())); String inputLine; while
+			 * ((inputLine = in.readLine()) != null) System.out.println(inputLine);
+			 * in.close(); Assert.analyzeLog(driver);
+			 */
 
 		}catch(Exception e) 
 		{
@@ -1101,13 +1102,13 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 					}					
 				}
 			}else{
-				Extent_Reporting.Log_Fail("Cash Payment Transaction success Message does not exist", "Failed", driver);
+				Extent_Reporting.Log_Fail(" Transaction success Message does not exist", "Failed", driver);
 				throw new Exception("Test failed due to local host page not displayed");
 			}
 
 		}catch(Exception e) 
 		{
-			Extent_Reporting.Log_Fail("Cash Payment Transaction success Message does not exist", "Failed", driver);
+			Extent_Reporting.Log_Fail(" Transaction success Message does not exist it may redirect to bank page.", "Failed", driver);
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
 			throw new Exception("Failed due to Transaction Success message does not exist");
