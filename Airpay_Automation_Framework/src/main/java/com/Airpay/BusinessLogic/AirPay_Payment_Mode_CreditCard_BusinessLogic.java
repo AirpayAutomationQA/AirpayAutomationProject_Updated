@@ -1101,7 +1101,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 					}					
 				}
 			}else{
-				Extent_Reporting.Log_Fail("Cash Payment Transaction success Message does not exist", "Failed", driver);
+				Extent_Reporting.Log_Fail("Transaction failed or landed to otp page due to bank configuration issue.", "Failed", driver);
 				throw new Exception("Test failed due to local host page not displayed");
 			}
 
