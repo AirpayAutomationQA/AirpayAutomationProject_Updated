@@ -276,7 +276,7 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 						||errMsg.contains("Credit Card Number is Empty")||errMsg.contains("We are sorry but the transaction failed. Try paying using another method")
 						|| errMsg.contains("This card is not valid for selected bank.")){	
 					Extent_Reporting.Log_Pass("Repective Error Message is exist", "Error Msg is:"+errMsg);
-					Extent_Reporting.Log_report_img("Respective Error Message is exist", "Passed", driver);		    	 
+					Extent_Reporting.Log_report_img("Error Message:- "+errMsg+" is exist", "Passed", driver);		    	 
 				}else{
 	
 					Extent_Reporting.Log_Fail("Respective error Message does not exist", "Failed", driver);
