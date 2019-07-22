@@ -50,8 +50,8 @@ public class Create_TestNGXML {
 		killProcessRunning("iexplore.exe *32");
 		killProcessRunning("iexplore.exe");
 		killProcessRunning("ALM-Client.exe");
-		killProcessRunning("chromedriver.exe");	
-		killProcessRunning("chrome.exe");
+		//killProcessRunning("chromedriver.exe");	
+		//killProcessRunning("chrome.exe");
 		killProcessRunning("scalc.exe");	
     	//calling out the excel datasheet instance to get all the "Y" data for setting up the testngxml
 		// Excel sheet 1 st one.........................................	 		
@@ -102,8 +102,9 @@ public class Create_TestNGXML {
     	        test.setPreserveOrder ("true");
     	        test.addParameter("browserType", Excel_Handling.Get_Data(key, "Browser_Type"));
     	        test.addParameter("tcID", key);
-    	        test.addParameter("appURL", new Common_Functions_old().GetXMLTagValue(Constants.configPath+"Config.xml", "AppUrl")); 	        
-        		XmlClass testClass = new XmlClass ();
+    	        //test.addParameter("appURL", new Common_Functions_old().GetXMLTagValue(Constants.configPath+"Config.xml", "AppUrl")); 	        
+    	        test.addParameter("appURL", Excel_Handling.Get_Data(key, "PaymentPage_URL"));
+    	        XmlClass testClass = new XmlClass ();
         		testClass.setName ("com.Airpay.Tests."+Excel_Handling.Get_Data(key, "Class_Name"));
     	        test.setXmlClasses (Arrays.asList (new XmlClass[] { testClass}));
         		
