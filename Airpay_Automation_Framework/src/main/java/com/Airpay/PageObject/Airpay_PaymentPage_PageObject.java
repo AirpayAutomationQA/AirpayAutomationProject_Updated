@@ -12,6 +12,13 @@ public class Airpay_PaymentPage_PageObject {
 		public static final  String  Amount = "//input[@id='amount']";
 		public static final  String  payHerebtn= "//button[@type='submit']";
 		
+	//*************************Local Host Directpay *******************************************************
+		public static final  String  name = "//input[contains(@class, 'user-name')]";
+		 public static final  String  email = "//input[contains(@class, 'user-email')]";
+		 public static final  String  phone = "//input[contains(@class, 'mob-num')]";
+		 public static final  String  amount = "//input[contains(@class, 'user-amt')]";
+		 public static final  String  paybutton = "//div[contains(@class, 'pay-submit-btn')]";	
+		
 	//*************************** Net Banking Page Locators ****************************
 		
 		public static final String SelectBank_DropDown = "//input[@name='bankName']";
