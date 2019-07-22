@@ -78,7 +78,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			else{
 				Extent_Reporting.Log_Fail("Local Host page not exist ", "Local Host page not displayed", driver);   
 				Log.error("Local Host page not successfully displayed");
-				throw new Exception(" Test failed due to local host page not displayed");
+				//throw new Exception(" Test failed due to local host page not displayed");
 			}
 		}                     
 		catch(Exception e)	
@@ -86,7 +86,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Payment page is exist", "Might be provided valid data", driver);   
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 	
@@ -126,14 +126,14 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 					Extent_Reporting.Log_Pass("Respective error is exist as :"+errVerfiy, "Passed");           	
 				}else{ 
 					Extent_Reporting.Log_Fail("Respective error does not exist :"+errVerfiy, "Might be provided valid data", driver);
-					throw new Exception("error verification");
+					//throw new Exception("error verification");
 				}
 				Assert.waitForPageToLoad(driver);
 			}
 			else{
 				Extent_Reporting.Log_Fail("Local Host page not exist ", "Local Host page not displayed", driver);   
 				Log.error("Local Host page not successfully displayed");
-				throw new Exception(" Test failed due to local host page not displayed");
+				//throw new Exception(" Test failed due to local host page not displayed");
 			}
 		}                     
 		catch(Exception e)	
@@ -141,7 +141,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Payment page is exist", "Might be provided valid data", driver);   
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 
@@ -160,7 +160,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Some fields are not disp", "Failed", driver);   
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 
@@ -190,7 +190,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Credit card error red line does not exist", "Failed", driver);   
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 
@@ -209,7 +209,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Some fields or else data issue is exist", "Failed", driver);   
 			Log.error("Test failed due Some fields or else data issue is exist");
 			e.printStackTrace();
-			throw new Exception("Some fields or else data issue is exist");
+			//throw new Exception("Some fields or else data issue is exist");
 		}
 	}
 
@@ -226,7 +226,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Some fields or else data issue is exist", "Failed", driver);   
 			Log.error("Test failed due Some fields or else data issue is exist");
 			e.printStackTrace();
-			throw new Exception("Some fields or else data issue is exist");
+			//throw new Exception("Some fields or else data issue is exist");
 		}
 	}
 
@@ -244,7 +244,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Some fields or else data issue is exist", "Failed", driver);   
 			Log.error("Test failed due Some fields or else data issue is exist");
 			e.printStackTrace();
-			throw new Exception("Some fields or else data issue is exist");
+			//throw new Exception("Some fields or else data issue is exist");
 		}
 	}
 
@@ -278,7 +278,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Some fields or else data issue is exist", "Failed", driver);   
 			Log.error("Test failed due Some fields or else data issue is exist");
 			e.printStackTrace();
-			throw new Exception("Some fields or else data issue is exist");
+			//throw new Exception("Some fields or else data issue is exist");
 		}
 	}
 	
@@ -300,7 +300,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Some fields or else data issue is exist", "Failed", driver);   
 			Log.error("Test failed due Some fields or else data issue is exist");
 			e.printStackTrace();
-			throw new Exception("Some fields or else data issue is exist");
+			//throw new Exception("Some fields or else data issue is exist");
 		}
 	}
 	
@@ -334,7 +334,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Some fields are not disp", "Failed", driver);   
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 
@@ -367,7 +367,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Some fields are not disp", "Failed", driver);   
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 
@@ -385,7 +385,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Some fields are not disp", "Failed", driver);   
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			// new Exception("Test failed due to local host page not displayed");
 		}
 	}
 
@@ -419,7 +419,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Some fields are not disp", "Failed", driver);   
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 	
@@ -444,7 +444,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Some fields are not disp", "Failed", driver);   
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}		
 
@@ -654,7 +654,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Respective error Message does not exist", "Failed", driver);
 			Log.error("Respective error Message does not exist");
 			e.printStackTrace();
-			throw new Exception("Respective error Message does not exist");
+			//throw new Exception("Respective error Message does not exist");
 		}
 	}
 
@@ -668,7 +668,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Some fields are not disp", "Failed", driver);   
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 
@@ -687,7 +687,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 		{
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 	public static String CardName = null;
@@ -706,7 +706,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Some fields are not disp", "Failed", driver);   
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 
@@ -813,7 +813,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Card input field does not exist", "Failed", driver);   
 			Log.error("Test failed due to Card input field does not exist");
 			e.printStackTrace();
-			throw new Exception("Test failed due to Card input field does not exist");
+			//throw new Exception("Test failed due to Card input field does not exist");
 		}
 	}
 
@@ -834,7 +834,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Some fields are not disp", "Failed", driver);   
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 	public static String ErrorVal =null;
@@ -865,7 +865,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Credit cvv field does not exist", "Failed", driver);
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 
@@ -920,7 +920,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Credit card Expiry date field does not exist", "Failed", driver);
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 
@@ -953,7 +953,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Some fields are not disp", "Failed", driver);   
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 
@@ -973,7 +973,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Cash Pincode field does not exist", "Failed", driver);
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 
@@ -997,7 +997,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 				Extent_Reporting.Log_Fail("Some fields are not disp", "Failed", driver);   
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 	public void Cash_paymentSuccess() throws Exception{
@@ -1009,7 +1009,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 				Extent_Reporting.Log_report_img("Success payment Transaction Message is displayed", "Passed", driver);
 			}else{
 				Extent_Reporting.Log_Fail("Cash Payment Transaction success Message does not exist", "Failed", driver);
-				throw new Exception("Test failed due to local host page not displayed");
+				//throw new Exception("Test failed due to local host page not displayed");
 			}
 
 		}catch(Exception e) 
@@ -1017,7 +1017,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Cash Payment Transaction success Message does not exist", "Failed", driver);
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
-			throw new Exception("Failed due to Transaction Success message does not exist");
+			//throw new Exception("Failed due to Transaction Success message does not exist");
 		}
 	}
 
@@ -1111,7 +1111,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail(" Transaction success Message does not exist it may redirect to bank page.", "Failed", driver);
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
-			throw new Exception("Failed due to Transaction Success message does not exist");
+			//throw new Exception("Failed due to Transaction Success message does not exist");
 		}
 	}
 
@@ -1131,11 +1131,11 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 					Extent_Reporting.Log_report_img("Red line error screen print", "Passed", driver);
 				}else{
 					Extent_Reporting.Log_Fail("Might be you have provided correct pin code", "Failed", driver);
-					throw new Exception("Test failed due to local host page not displayed");
+					//throw new Exception("Test failed due to local host page not displayed");
 				}
 			}else{
 				Extent_Reporting.Log_Fail("Cash Payment Transaction success Message does not exist", "Failed", driver);
-				throw new Exception("Test failed due to local host page not displayed");
+				//throw new Exception("Test failed due to local host page not displayed");
 			}
 
 		}catch(Exception e) 
@@ -1143,7 +1143,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Cash Payment Transaction success Message does not exist", "Failed", driver);
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
-			throw new Exception("Failed due to Transaction Success message does not exist");
+			//throw new Exception("Failed due to Transaction Success message does not exist");
 		}
 	}
 
@@ -1176,7 +1176,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Cash Payment Transaction success Message does not exist", "Failed", driver);
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
-			throw new Exception("Failed due to Transaction Success message does not exist");
+			//throw new Exception("Failed due to Transaction Success message does not exist");
 		}
 	}
 
@@ -1192,14 +1192,14 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 
 			}else{
 				Extent_Reporting.Log_Fail("UPI Address Red Line Error does not exist", "Failed", driver);
-				throw new Exception("UPI Address Red Line Error does not exist");
+				//throw new Exception("UPI Address Red Line Error does not exist");
 			}
 		}catch(Exception e) 
 		{
 			Extent_Reporting.Log_Fail("UPI Address Red Line Error does not exist", "Failed", driver);
 			Log.error("UPI Address Red Line Error does not exist");
 			e.printStackTrace();
-			throw new Exception("UPI Address Red Line Error does not exist");
+			//throw new Exception("UPI Address Red Line Error does not exist");
 		}
 	}
 	
@@ -1214,14 +1214,14 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 
 			}else{
 				Extent_Reporting.Log_Fail("UPI Address Red Line Error does not exist", "Failed", driver);
-				throw new Exception("UPI Address Red Line Error does not exist");
+				//throw new Exception("UPI Address Red Line Error does not exist");
 			}
 		}catch(Exception e) 
 		{
 			Extent_Reporting.Log_Fail("UPI Address Red Line Error does not exist", "Failed", driver);
 			Log.error("UPI Address Red Line Error does not exist");
 			e.printStackTrace();
-			throw new Exception("UPI Address Red Line Error does not exist");
+			//throw new Exception("UPI Address Red Line Error does not exist");
 		}
 	}
 	
@@ -1237,14 +1237,14 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 
 			}else{
 				Extent_Reporting.Log_Fail("UPI Address Red Line Error does not exist", "Failed", driver);
-				throw new Exception("UPI Address Red Line Error does not exist");
+				//throw new Exception("UPI Address Red Line Error does not exist");
 			}
 		}catch(Exception e) 
 		{
 			Extent_Reporting.Log_Fail("UPI Address Red Line Error does not exist", "Failed", driver);
 			Log.error("UPI Address Red Line Error does not exist");
 			e.printStackTrace();
-			throw new Exception("UPI Address Red Line Error does not exist");
+			//throw new Exception("UPI Address Red Line Error does not exist");
 		}
 	}
 
@@ -1263,14 +1263,14 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 				Thread.sleep(5000);
 			}else{
 				Extent_Reporting.Log_Fail("UPI Address Field Does not exist", "Failed", driver);
-				throw new Exception("UPI Address Field Does not exist");
+				//throw new Exception("UPI Address Field Does not exist");
 			}
 		}catch(Exception e) 
 		{
 			Extent_Reporting.Log_Fail("UPI Address Field Does not exist", "Failed", driver);
 			Log.error("UPI Address Field Does not exist");
 			e.printStackTrace();
-			throw new Exception("UPI Address Field Does not exist");
+			//throw new Exception("UPI Address Field Does not exist");
 		}
 	}
 
@@ -1286,14 +1286,14 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 				Assert.waitForPageToLoad(driver);
 			}else{
 				Extent_Reporting.Log_Fail("UPI Address Field Does not exist", "Failed", driver);
-				throw new Exception("UPI Address Field Does not exist");
+				//throw new Exception("UPI Address Field Does not exist");
 			}
 		}catch(Exception e) 
 		{
 			Extent_Reporting.Log_Fail("UPI Address Field Does not exist", "Failed", driver);
 			Log.error("UPI Address Field Does not exist");
 			e.printStackTrace();
-			throw new Exception("UPI Address Field Does not exist");
+			//throw new Exception("UPI Address Field Does not exist");
 		}
 	}
 	
@@ -1310,14 +1310,14 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 				Assert.waitForPageToLoad(driver);
 			}else{
 				Extent_Reporting.Log_Fail("UPI Address Field Does not exist", "Failed", driver);
-				throw new Exception("UPI Address Field Does not exist");
+				//throw new Exception("UPI Address Field Does not exist");
 			}
 		}catch(Exception e) 
 		{
 			Extent_Reporting.Log_Fail("UPI Address Field Does not exist", "Failed", driver);
 			Log.error("UPI Address Field Does not exist");
 			e.printStackTrace();
-			throw new Exception("UPI Address Field Does not exist");
+			//throw new Exception("UPI Address Field Does not exist");
 		}
 	}
 	
@@ -1333,14 +1333,14 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 				Assert.waitForPageToLoad(driver);
 			}else{
 				Extent_Reporting.Log_Fail("UPI Address Field Does not exist", "Failed", driver);
-				throw new Exception("UPI Address Field Does not exist");
+				//throw new Exception("UPI Address Field Does not exist");
 			}
 		}catch(Exception e) 
 		{
 			Extent_Reporting.Log_Fail("UPI Address Field Does not exist", "Failed", driver);
 			Log.error("UPI Address Field Does not exist");
 			e.printStackTrace();
-			throw new Exception("UPI Address Field Does not exist");
+			//throw new Exception("UPI Address Field Does not exist");
 		}
 	}
 	
@@ -1353,14 +1353,14 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 				Assert.Javascriptexecutor_forClick(driver, PopupErrmShbBtn, "Error Message");    
 			}else{
 				Extent_Reporting.Log_Fail("Error Popup does not exist", "Failed", driver);
-				throw new Exception("Error Popup does not exist");
+				//throw new Exception("Error Popup does not exist");
 			}
 		}catch(Exception e) 
 		{
 			Extent_Reporting.Log_Fail("UPI Address Field Does not exist", "Failed", driver);
 			Log.error("UPI Address Field Does not exist");
 			e.printStackTrace();
-			throw new Exception("UPI Address Field Does not exist");
+			//throw new Exception("UPI Address Field Does not exist");
 		}
 	}
 	
@@ -1415,7 +1415,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			else{
 				Extent_Reporting.Log_Fail(" option does not exis",	"Failed",driver);
 				Log.error("Local Host page not successfully displayed");
-				throw new Exception("option does not exist displayed");
+				//throw new Exception("option does not exist displayed");
 			}
 		}                     
 		catch(Exception e)	
@@ -1423,7 +1423,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail(" option does not exis",	"Failed",driver);
 			Log.error("Test failed due to card does not exist");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 	
@@ -1497,7 +1497,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			else{
 				Extent_Reporting.Log_Fail(" option does not exis",	"Failed",driver);
 				Log.error("Local Host page not successfully displayed");
-				throw new Exception("option does not exist displayed");
+				//throw new Exception("option does not exist displayed");
 			}
 		}                     
 		catch(Exception e)	
@@ -1505,7 +1505,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail(" option does not exis",	"Failed",driver);
 			Log.error("Test failed due to card does not exist");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 	
@@ -1532,7 +1532,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("Respective error Message does not exist", "Failed", driver);
 			Log.error("Respective error Message does not exist");
 			e.printStackTrace();
-			throw new Exception("Respective error Message does not exist");
+			//throw new Exception("Respective error Message does not exist");
 		}
 	}
 
@@ -1552,11 +1552,11 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 					Extent_Reporting.Log_report_img("Red line error screen print", "Passed", driver);
 				}else{
 					Extent_Reporting.Log_Fail("Might be you have provided correct pin code", "Failed", driver);
-					throw new Exception("Test failed due to local host page not displayed");
+					//throw new Exception("Test failed due to local host page not displayed");
 				}
 			}else{
 				Extent_Reporting.Log_Fail("UTR Page field doen not exist", "Failed", driver);
-				throw new Exception("Failed due to UTR page does not exist");
+				//throw new Exception("Failed due to UTR page does not exist");
 			}
 
 		}catch(Exception e) 
@@ -1564,7 +1564,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail("UTR Page field doen not exist", "Failed", driver);
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
-			throw new Exception("Failed due to Transaction Success message does not exist");
+			//throw new Exception("Failed due to Transaction Success message does not exist");
 		}
 	}
 
@@ -1653,7 +1653,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			else{
 				Extent_Reporting.Log_Fail(" option does not exis",	"Failed",driver);
 				Log.error("Local Host page not successfully displayed");
-				throw new Exception("option does not exist displayed");
+				//throw new Exception("option does not exist displayed");
 			}
 		}                     
 		catch(Exception e)	
@@ -1661,7 +1661,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail(" option does not exis",	"Failed",driver);
 			Log.error("Test failed due to card does not exist");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 	
@@ -1746,7 +1746,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			else{
 				Extent_Reporting.Log_Fail(" option does not exis",	"Failed",driver);
 				Log.error("Local Host page not successfully displayed");
-				throw new Exception("option does not exist displayed");
+				//throw new Exception("option does not exist displayed");
 			}
 		}                     
 		catch(Exception e)	
@@ -1754,7 +1754,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail(" option does not exis",	"Failed",driver);
 			Log.error("Test failed due to card does not exist");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 	
@@ -1844,7 +1844,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			else{
 				Extent_Reporting.Log_Fail(" option does not exis",	"Failed",driver);
 				Log.error("Local Host page not successfully displayed");
-				throw new Exception("option does not exist displayed");
+				//throw new Exception("option does not exist displayed");
 			}
 		}                     
 		catch(Exception e)	
@@ -1852,7 +1852,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail(" option does not exis",	"Failed",driver);
 			Log.error("Test failed due to card does not exist");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 	
@@ -1930,7 +1930,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			else{
 				Extent_Reporting.Log_Fail(" option does not exis",	"Failed",driver);
 				Log.error("Local Host page not successfully displayed");
-				throw new Exception("option does not exist displayed");
+				//throw new Exception("option does not exist displayed");
 			}
 		}                     
 		catch(Exception e)	
@@ -1938,7 +1938,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Extent_Reporting.Log_Fail(" option does not exis",	"Failed",driver);
 			Log.error("Test failed due to card does not exist");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 	

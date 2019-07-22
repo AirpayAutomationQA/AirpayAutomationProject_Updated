@@ -45,7 +45,7 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 			Extent_Reporting.Log_Fail("Some fields are not disp", "Failed", driver);   
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 		
@@ -66,7 +66,7 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 			Extent_Reporting.Log_Fail("Some fields are not disp", "Failed", driver);   
 			Log.error("Test failed due to page is navigating to payment page");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 	
@@ -87,7 +87,7 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 			Extent_Reporting.Log_Fail("EMI option table not in proper", "Failed", driver);   
 			Log.error("EMI Option issue");
 			e.printStackTrace();
-			throw new Exception("EMI Option Issue");
+			//throw new Exception("EMI Option Issue");
 		}
 	}
 
@@ -128,7 +128,7 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 			else{
 				Extent_Reporting.Log_Fail("Bank Name selection issue",	"Failed",driver);
 				Log.error("Bank Name selection does not displayed");
-				throw new Exception("option does not exist displayed");
+				//throw new Exception("option does not exist displayed");
 			}
 		}                     
 		catch(Exception e)	
@@ -136,7 +136,7 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 			Extent_Reporting.Log_Fail(" Bank option does not exis",	"Failed",driver);
 			Log.error("Test failed due to card does not exist");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 	
@@ -165,7 +165,7 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 			else{
 				Extent_Reporting.Log_Fail("Bank Name selection issue",	"Failed",driver);
 				Log.error("Bank Name selection does not displayed");
-				throw new Exception("option does not exist displayed");
+				//throw new Exception("option does not exist displayed");
 			}
 		}                     
 		catch(Exception e)	
@@ -173,7 +173,7 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 			Extent_Reporting.Log_Fail(" Bank option does not exis",	"Failed",driver);
 			Log.error("Test failed due to card does not exist");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 		
@@ -188,7 +188,7 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 			Extent_Reporting.Log_Fail("Bharat QR option does not disp", "Failed", driver);   
 			Log.error("Bharat QR option issue");
 			e.printStackTrace();
-			throw new Exception("Bharat QR option");
+			//throw new Exception("Bharat QR option");
 		}
 	}		
 	
@@ -202,7 +202,7 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 			Extent_Reporting.Log_Fail("AmexeZeClick does not disp", "Failed", driver);   
 			Log.error("Bharat QR option issue");
 			e.printStackTrace();
-			throw new Exception("Bharat QR option");
+			//throw new Exception("Bharat QR option");
 		}
 	}
 	
@@ -219,7 +219,7 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 			Extent_Reporting.Log_Fail("Amazon_pay does not disp", "Failed", driver);   
 			Log.error("Amazon_pay issue");
 			e.printStackTrace();
-			throw new Exception("Amazon_pay issue");
+			//throw new Exception("Amazon_pay issue");
 		}
 	}	
 		
@@ -233,13 +233,13 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 				Extent_Reporting.Log_report_img("Bharat QR code is exist", "Passed", driver);
 			}else{			
 				Extent_Reporting.Log_Fail("Bharat QR Popup does not exist","failed",driver);   
-				throw new Exception("Test failed due to local host page not displayed");
+				//throw new Exception("Test failed due to local host page not displayed");
 			}	   
 		}catch(Exception e)	
 		{
 			Extent_Reporting.Log_Fail("Bar code issue", "Failed", driver);   
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}	
 		
@@ -252,13 +252,13 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 				Extent_Reporting.Log_report_img("Bharat QR code is exist", "Passed", driver);
 			}else{			
 				Extent_Reporting.Log_Fail("Bharat QR Popup does not exist","failed",driver);   
-				throw new Exception("Test failed due to local host page not displayed");
+				//throw new Exception("Test failed due to local host page not displayed");
 			}	   
 		}catch(Exception e)	
 		{
 			Extent_Reporting.Log_Fail("Bar code issue", "Failed", driver);   
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 	
@@ -290,7 +290,7 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 			Extent_Reporting.Log_Fail("Respective error Message does not exist", "Failed", driver);
 			Log.error("Respective error Message does not exist");
 			e.printStackTrace();
-			throw new Exception("Respective error Message does not exist");
+			//throw new Exception("Respective error Message does not exist");
 		}
 	}
 	
@@ -352,7 +352,7 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 			  {			 
 				  Extent_Reporting.Log_Fail("Its not navigated to Respective Bank as", "Error Snap", driver);
 				  Log.error("Its not navigated to Respective Bank as :"+bankName);
-				//throw new Exception("Net Banking page issue");
+				////throw new Exception("Net Banking page issue");
 			  }else{
 				  Extent_Reporting.Log_Pass("Its Navigated to :"+bankName, "Passed");
 				  Extent_Reporting.Log_report_img("Its Navigated to respective Page" , "Passed", driver);
@@ -363,7 +363,7 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 				Extent_Reporting.Log_Fail(" Make payment button does not exist for net banking",	"Failed",driver);
 				Log.error("Test failed due to card does not exist");
 				e.printStackTrace();
-				//throw new Exception("Test failed due to local host page not displayed");
+				////throw new Exception("Test failed due to local host page not displayed");
 			}
 		} 
 	
@@ -380,7 +380,7 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 			Extent_Reporting.Log_Fail("AmexeZeClick does not disp", "Failed", driver);   
 			Log.error("Bharat QR option issue");
 			e.printStackTrace();
-			throw new Exception("Bharat QR option");
+			//throw new Exception("Bharat QR option");
 		}
 	}	
 	
@@ -395,7 +395,7 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 			Extent_Reporting.Log_Fail("Virtual Bank Account details does not disp", "Failed", driver);   
 			Log.error("Virtual Bank Account details issue");
 			e.printStackTrace();
-			throw new Exception("Virtual Bank Account details issue");
+			//throw new Exception("Virtual Bank Account details issue");
 		}
 	}	
 	
@@ -416,7 +416,7 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 			Extent_Reporting.Log_Fail("Virtual Account details fields does not exist", "Failed", driver);
 			Log.error("Bharat QR option issue");
 			e.printStackTrace();
-			throw new Exception("Bharat QR option");
+			//throw new Exception("Bharat QR option");
 		}
 	}
 	
@@ -441,7 +441,7 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 			Extent_Reporting.Log_Fail("Tez details fields does not exist", "Failed", driver);
 			Log.error("Tez details option issue");
 			e.printStackTrace();
-			throw new Exception("Tez details");
+			//throw new Exception("Tez details");
 		}
 	}
 	
@@ -464,7 +464,7 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 			Extent_Reporting.Log_Fail("paytm details fields does not exist", "Failed", driver);
 			Log.error("paytm details option issue");
 			e.printStackTrace();
-			throw new Exception("paytm details");
+			//throw new Exception("paytm details");
 		}
 	}
 	
@@ -494,7 +494,7 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 			Extent_Reporting.Log_Fail("Tez details fields does not exist", "Failed", driver);
 			Log.error("Tez details option issue");
 			e.printStackTrace();
-			throw new Exception("Tez details");
+			//throw new Exception("Tez details");
 		}
 	}
 	
@@ -513,7 +513,7 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 			Extent_Reporting.Log_Fail("Tez make payment button does not exist", "Failed", driver);
 			Log.error("Tez details option issue");
 			e.printStackTrace();
-			throw new Exception("Tez details");
+			//throw new Exception("Tez details");
 		}
 	}
 	
@@ -532,7 +532,7 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 			Extent_Reporting.Log_Fail("paytm make payment button does not exist", "Failed", driver);
 			Log.error("paytm details option issue");
 			e.printStackTrace();
-			throw new Exception("paytm details");
+			//throw new Exception("paytm details");
 		}
 	}
 	
@@ -548,14 +548,14 @@ public class AirPay_Payment_Mode_EMI_Credit_Card_BusinessLogic extends Airpay_Pa
 
 			}else{
 				Extent_Reporting.Log_Fail("UPI Address Red Line Error does not exist", "Failed", driver);
-				throw new Exception("UPI Address Red Line Error does not exist");
+				//throw new Exception("UPI Address Red Line Error does not exist");
 			}
 		}catch(Exception e) 
 		{
 			Extent_Reporting.Log_Fail("UPI Address Red Line Error does not exist", "Failed", driver);
 			Log.error("UPI Address Red Line Error does not exist");
 			e.printStackTrace();
-			throw new Exception("UPI Address Red Line Error does not exist");
+			//throw new Exception("UPI Address Red Line Error does not exist");
 		}
 	}
 	

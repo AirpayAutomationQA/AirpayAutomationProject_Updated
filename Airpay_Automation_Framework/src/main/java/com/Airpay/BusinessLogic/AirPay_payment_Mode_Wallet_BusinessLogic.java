@@ -62,7 +62,7 @@ public class AirPay_payment_Mode_Wallet_BusinessLogic extends Airpay_PaymentPage
 		{
 			Log.error("Test failed due to card does not exist");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 	
@@ -88,14 +88,14 @@ public class AirPay_payment_Mode_Wallet_BusinessLogic extends Airpay_PaymentPage
 			else{
 				Extent_Reporting.Log_Fail("Wallet page not exist ", "Wallet page not displayed", driver);   
 				Log.error("Wallet page not exist ");
-				throw new Exception(" Wallet page not displayed");
+				//throw new Exception(" Wallet page not displayed");
 			}
 		}                     
 		catch(Exception e)	
 		{
 			Log.error("Test failed due to local host page not displayed");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 	
@@ -135,7 +135,7 @@ public class AirPay_payment_Mode_Wallet_BusinessLogic extends Airpay_PaymentPage
 			else{
 				Extent_Reporting.Log_Fail(" option does not exis",	"Failed",driver);
 				Log.error("Local Host page not successfully displayed");
-				throw new Exception("option does not exist displayed");
+				//throw new Exception("option does not exist displayed");
 			}
 		}                     
 		catch(Exception e)	
@@ -143,7 +143,7 @@ public class AirPay_payment_Mode_Wallet_BusinessLogic extends Airpay_PaymentPage
 			Extent_Reporting.Log_Fail(" option does not exis",	"Failed",driver);
 			Log.error("Test failed due to card does not exist");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 
@@ -172,7 +172,7 @@ public class AirPay_payment_Mode_Wallet_BusinessLogic extends Airpay_PaymentPage
 			else{
 				Extent_Reporting.Log_Fail(" option does not exis",	"Failed",driver);
 				Log.error("Local Host page not successfully displayed");
-				throw new Exception("option does not exist displayed");
+				//throw new Exception("option does not exist displayed");
 			}
 		}                     
 		catch(Exception e)	
@@ -180,7 +180,7 @@ public class AirPay_payment_Mode_Wallet_BusinessLogic extends Airpay_PaymentPage
 			Extent_Reporting.Log_Fail(" option does not exis",	"Failed",driver);
 			Log.error("Test failed due to card does not exist");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 	
@@ -211,7 +211,7 @@ public class AirPay_payment_Mode_Wallet_BusinessLogic extends Airpay_PaymentPage
 			else{
 				Extent_Reporting.Log_Fail(" option does not exis",	"Failed",driver);
 				Log.error("Local Host page not successfully displayed");
-				throw new Exception("option does not exist displayed");
+				//throw new Exception("option does not exist displayed");
 			}
 		}                     
 		catch(Exception e)	
@@ -219,7 +219,7 @@ public class AirPay_payment_Mode_Wallet_BusinessLogic extends Airpay_PaymentPage
 			Extent_Reporting.Log_Fail(" option does not exis",	"Failed",driver);
 			Log.error("Test failed due to card does not exist");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 	
@@ -261,7 +261,7 @@ public class AirPay_payment_Mode_Wallet_BusinessLogic extends Airpay_PaymentPage
 					{
 						Extent_Reporting.Log_Fail("Repective Error Message does not exist", "Error Msg is:"+errMsg, driver);
 					}
-				//throw new Exception("Net Banking page issue");
+				////throw new Exception("Net Banking page issue");
 			  }else{
 				  Extent_Reporting.Log_Pass("Its Navigated to :"+bankName, "Passed");
 				  Extent_Reporting.Log_report_img("Its Navigated to respectivebank" , "Passed", driver);
@@ -271,7 +271,7 @@ public class AirPay_payment_Mode_Wallet_BusinessLogic extends Airpay_PaymentPage
 			{
 				Log.error("Test failed due to card does not exist");
 				e.printStackTrace();
-				//throw new Exception("Test failed due to local host page not displayed");
+				////throw new Exception("Test failed due to local host page not displayed");
 			}
 		} 
 	
@@ -308,7 +308,7 @@ public class AirPay_payment_Mode_Wallet_BusinessLogic extends Airpay_PaymentPage
 
 					  Log.error("Its not navigated to Respective Bank as :"+bankName);
 				  }
-				//throw new Exception("Net Banking page issue");
+				////throw new Exception("Net Banking page issue");
 			  }else{
 				  Extent_Reporting.Log_Pass("Its Navigated to :"+bankName, "Passed");
 				  Extent_Reporting.Log_report_img("Its Navigated to respectivebank" , "Passed", driver);
@@ -319,7 +319,7 @@ public class AirPay_payment_Mode_Wallet_BusinessLogic extends Airpay_PaymentPage
 				Extent_Reporting.Log_Fail(" Make payment button does not exist for net banking",	"Failed",driver);
 				Log.error("Test failed due to card does not exist");
 				e.printStackTrace();
-				//throw new Exception("Test failed due to local host page not displayed");
+				////throw new Exception("Test failed due to local host page not displayed");
 			}
 		} 
 	
@@ -353,14 +353,14 @@ public class AirPay_payment_Mode_Wallet_BusinessLogic extends Airpay_PaymentPage
 			else{
 				Extent_Reporting.Log_Fail("Local Host page not exist ", "Local Host page not displayed", driver);   
 				Log.error("Local Host page not successfully displayed");
-				throw new Exception(" Test failed due to local host page not displayed");
+				//throw new Exception(" Test failed due to local host page not displayed");
 			}
 		}                     
 		catch(Exception e)	
 		{
 			Log.error("Test failed due to local host page not displayed");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 
@@ -376,7 +376,7 @@ public class AirPay_payment_Mode_Wallet_BusinessLogic extends Airpay_PaymentPage
 			Extent_Reporting.Log_Fail(" Make payment button does not exist for net banking",	"Failed",driver);
 			Log.error("Test failed due to card does not exist");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 	
@@ -393,7 +393,7 @@ public class AirPay_payment_Mode_Wallet_BusinessLogic extends Airpay_PaymentPage
 			Extent_Reporting.Log_Fail(" Make payment button does not exist for net banking",	"Failed",driver);
 			Log.error("Test failed due to card does not exist");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 	
@@ -433,7 +433,7 @@ public class AirPay_payment_Mode_Wallet_BusinessLogic extends Airpay_PaymentPage
 			else{
 				Extent_Reporting.Log_Fail(" option does not exis",	"Failed",driver);
 				Log.error("Local Host page not successfully displayed");
-				throw new Exception("option does not exist displayed");
+				//throw new Exception("option does not exist displayed");
 			}
 		}                     
 		catch(Exception e)	
@@ -441,7 +441,7 @@ public class AirPay_payment_Mode_Wallet_BusinessLogic extends Airpay_PaymentPage
 			Extent_Reporting.Log_Fail(" option does not exis",	"Failed",driver);
 			Log.error("Test failed due to card does not exist");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 	
@@ -480,7 +480,7 @@ public class AirPay_payment_Mode_Wallet_BusinessLogic extends Airpay_PaymentPage
 			else{
 				Extent_Reporting.Log_Fail(" option does not exis",	"Failed",driver);
 				Log.error("Local Host page not successfully displayed");
-				throw new Exception("option does not exist displayed");
+				//throw new Exception("option does not exist displayed");
 			}
 		}                     
 		catch(Exception e)	
@@ -488,7 +488,7 @@ public class AirPay_payment_Mode_Wallet_BusinessLogic extends Airpay_PaymentPage
 			Extent_Reporting.Log_Fail(" option does not exis",	"Failed",driver);
 			Log.error("Test failed due to card does not exist");
 			e.printStackTrace();
-			throw new Exception("Test failed due to local host page not displayed");
+			//throw new Exception("Test failed due to local host page not displayed");
 		}
 	}
 
