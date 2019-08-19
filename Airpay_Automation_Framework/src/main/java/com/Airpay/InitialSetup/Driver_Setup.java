@@ -1,8 +1,12 @@
 package com.Airpay.InitialSetup;
 
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -39,6 +43,9 @@ public class Driver_Setup {
 			
 		case "SAFARI":
 			driver = initfirefoxDriver(appURL);
+			break;	
+		case "MOBILE":
+			driver = initmobile(appURL);
 			break;	
 
 		default :
@@ -90,6 +97,22 @@ public class Driver_Setup {
 		driver= new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.navigate().to(appURL);
+		return driver;
+	}
+	public WebDriver initmobile(String appURL) throws InterruptedException {
+		System.out.println("Launching google chrome driver!!! .");
+		System.setProperty("webdriver.chrome.driver", driverPath
+				+ "chromedriver.exe");
+		Map<String, String> mobileEmulation = new HashMap<>();
+		mobileEmulation.put("deviceName", "Nexus 5");
+		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
+
+		driver = new ChromeDriver(chromeOptions);
+		driver.manage().window().maximize();
+		Thread.sleep(5000);
+		driver.navigate().to(appURL);
+		driver.manage().deleteAllCookies();
 		return driver;
 	}
 	
