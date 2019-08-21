@@ -167,6 +167,10 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 
 	public void Credit_Card_Field_ErrVerify() throws Exception{
 		try{	
+			if(Assert.isElementDisplayed(driver, PageView,"Click on CC button"))
+			{
+				Assert.Clickbtn(driver, CC, "clikc on Credit card");
+			}
 			if(Assert.isElementDisplayed(driver, CreditCardMakePaymtBtn, "Credit Market Payment button"))
 			{			   
 				Assert.Clickbtn(driver, CreditCardMakePaymtBtn, "Credit Card make payment button");		   

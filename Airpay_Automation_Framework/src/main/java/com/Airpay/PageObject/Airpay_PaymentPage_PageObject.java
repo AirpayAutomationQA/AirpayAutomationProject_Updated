@@ -1,7 +1,8 @@
 package com.Airpay.PageObject;
 
 public class Airpay_PaymentPage_PageObject {
-	
+		public static final String PageView = "//*[@class='airpay-default mobile kit-']";
+		public static final String CC ="//*[@class='menu-link' and @data-tab-id='credit']";
 	//*************************Local Host page locators *******************************************************
 		public static final  String  BuyerMailId = "//input[@id='buyerEmail']";
 		public static final  String  BuyerPhoneNumber = "//input[@id='buyerPhone']";
