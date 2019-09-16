@@ -434,15 +434,10 @@ public class AirPay_PaymentPage_BusinessLogic extends Airpay_PaymentPage_PageObj
 					JavascriptExecutor js = (JavascriptExecutor)driver;					
 					js.executeScript("arguments[0].click();", e);*/
 					//Assert.Javascriptexecutor_forClick(driver, ChannelsName, "");
-					if(Assert.isElementDisplayed(driver, PageView,"Click on channel"))
-					{
-						JavascriptExecutor js = (JavascriptExecutor)driver;
-						js.executeScript("arguments[0].click();", ChannelsName);
-					}
-					else
-					{
-						ChannelsName.click();
-					}
+					JavascriptExecutor js = (JavascriptExecutor)driver;
+					js.executeScript("arguments[0].click();", ChannelsName);
+					
+					//	ChannelsName.click();
 					
 					
 					
