@@ -13,7 +13,7 @@ public class Airpay_PaymentPage_PageObject {
 		public static final  String  Amount = "//input[@id='amount']";
 		public static final  String  payHerebtn= "//button[@type='submit']";
 		public static final  String  ChMode = "//input[@id='chmod']";
-		
+		public static final  String  subtype = "//input[@id='subtype']";
 	//*************************Local Host Directpay *******************************************************
 		public static final  String  name = "//input[contains(@class, 'user-name')]";
 		 public static final  String  email = "//input[contains(@class, 'user-email')]";
