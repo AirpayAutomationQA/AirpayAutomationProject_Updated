@@ -67,6 +67,10 @@ public class AirPay_PaymentPage_BusinessLogic extends Airpay_PaymentPage_PageObj
 				{
 					Assert.inputText(driver, ChMode, Excel_Handling.Get_Data(TC_ID, "ChMode"), "ChMode");
 				}
+				if(!(Excel_Handling.Get_Data(TC_ID, "subtype")==null))
+				{
+					Assert.inputText(driver, subtype, Excel_Handling.Get_Data(TC_ID, "subtype"), "subtype");
+				}
 				//Assert.inputText(driver, Order_Id, Excel_Handling.Get_Data(TC_ID, "Order_Id"), "Order_Id");				Assert.inputText(driver, Amount, Excel_Handling.Get_Data(TC_ID, "Amount"), "Amount");
 				Extent_Reporting.Log_report_img("Local Host page required field filled", "Passed", driver);
 				Assert.Clickbtn(driver, payHerebtn, "Pay Here");
@@ -108,6 +112,10 @@ public class AirPay_PaymentPage_BusinessLogic extends Airpay_PaymentPage_PageObj
 				if(!(Excel_Handling.Get_Data(TC_ID, "ChMode")==null))
 				{
 					Assert.inputText(driver, ChMode, Excel_Handling.Get_Data(TC_ID, "ChMode"), "ChMode");
+				}
+				if(!(Excel_Handling.Get_Data(TC_ID, "subtype")==null))
+				{
+					Assert.inputText(driver, subtype, Excel_Handling.Get_Data(TC_ID, "subtype"), "subtype");
 				}
 				Extent_Reporting.Log_report_img("Local Host page required field filled", "Passed", driver);
 				Assert.inputText(driver, "//*[@name='wallet' and @id='wallet']", Excel_Handling.Get_Data(TC_ID, "Transaction_Wallet"), "Transaction Wallet");
@@ -152,6 +160,10 @@ public class AirPay_PaymentPage_BusinessLogic extends Airpay_PaymentPage_PageObj
 				if(!(Excel_Handling.Get_Data(TC_ID, "ChMode")==null))
 				{
 					Assert.inputText(driver, ChMode, Excel_Handling.Get_Data(TC_ID, "ChMode"), "ChMode");
+				}
+				if(!(Excel_Handling.Get_Data(TC_ID, "subtype")==null))
+				{
+					Assert.inputText(driver, subtype, Excel_Handling.Get_Data(TC_ID, "subtype"), "subtype");
 				}
 				//Assert.inputText(driver, Order_Id, Excel_Handling.Get_Data(TC_ID, "Order_Id"), "Order_Id");				Assert.inputText(driver, Amount, Excel_Handling.Get_Data(TC_ID, "Amount"), "Amount");
 				Extent_Reporting.Log_report_img("Local Host page required field filled", "Passed", driver);
@@ -402,6 +414,10 @@ public class AirPay_PaymentPage_BusinessLogic extends Airpay_PaymentPage_PageObj
 				if(!(Excel_Handling.Get_Data(TC_ID, "ChMode")==null))
 				{
 					Assert.inputText(driver, ChMode, Excel_Handling.Get_Data(TC_ID, "ChMode"), "ChMode");
+				}
+				if(!(Excel_Handling.Get_Data(TC_ID, "subtype")==null))
+				{
+					Assert.inputText(driver, subtype, Excel_Handling.Get_Data(TC_ID, "subtype"), "subtype");
 				}
 				Extent_Reporting.Log_report_img("Local Host page required field filled", "Passed", driver);
 				Assert.Clickbtn(driver, payHerebtn, "Pay Here");
