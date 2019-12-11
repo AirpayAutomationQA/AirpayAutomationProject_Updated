@@ -8,6 +8,7 @@ import java.io.FileWriter;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,6 +16,7 @@ import java.util.Map;
 
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.TestNG;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.Test;
 import org.testng.xml.XmlClass;
 import org.testng.xml.XmlInclude;
@@ -26,6 +28,7 @@ import com.Airpay.TestData.Excel_Handling;
 
 
 public class Create_TestNGXML {	
+	MailProjectClass mail =new MailProjectClass();
 	private static XSSFWorkbook workbook;
 	private static FileInputStream fis = null;
 	public  static int  Sheetcount ;
@@ -51,8 +54,8 @@ public class Create_TestNGXML {
 		killProcessRunning("iexplore.exe *32");
 		killProcessRunning("iexplore.exe");
 		killProcessRunning("ALM-Client.exe");
-		killProcessRunning("chromedriver.exe");	
-		killProcessRunning("chrome.exe");
+		//killProcessRunning("chromedriver.exe");	
+		//killProcessRunning("chrome.exe");
 		killProcessRunning("scalc.exe");	
     	//calling out the excel datasheet instance to get all the "Y" data for setting up the testngxml
 		// Excel sheet 1 st one.........................................	 		
@@ -148,7 +151,34 @@ public class Create_TestNGXML {
         Report_Setup.extent.flush();    
 	
     }
-	
+	@AfterSuite
+	public void sendreport()
+	{
+		File f = new File("D:\\\\Automation\\\\AirpayAutomationProject_Updated\\\\Airpay_Automation_Framework\\\\AirPayTestData\\\\Result\\\\Graphical Reporting\\\\HTML");
+		File[] files = f.listFiles();
+		Arrays.sort(files, new Comparator() {
+			public int compare(File f1, File f2) {
+				return Long.valueOf(f1.lastModified()).compareTo(
+						f2.lastModified());
+			}
+
+			@Override
+			public int compare(Object o1, Object o2) {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+		});
+		System.out.println("Files of the directory: ");
+		for (int i = 0; i < files.length; i++) {
+			System.out.println(files[i].getName());
+		}
+		System.out.println();
+		System.out.println("Latest File is: "
+				+ files[files.length - 1].getName());
+		System.out.println();
+		String file = "D:/Automation/AirpayAutomationProject_Updated/Airpay_Automation_Framework/AirPayTestData/Result/Graphical Reporting/HTML/"+files[files.length - 1].getName();
+		mail.sendmail(file, files[files.length - 1].getName());
+	}
 	public boolean killProcessRunning(String serviceName) throws Exception {
 		boolean flag = false;
 		try
