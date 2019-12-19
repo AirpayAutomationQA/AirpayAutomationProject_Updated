@@ -16,7 +16,7 @@ public static void sendmail(String file,String fileName)
 
     final String username = "qaairpay@gmail.com";
     final String password = "Admin@123";
-    String to = "swapnil.pawar@airpay.co.in";
+    String to = "qa@airpay.co.in";
     // Sender's email ID needs to be mentioned
     String from = "qaairpay@gmail.com";
     Properties props = new Properties();
@@ -39,7 +39,7 @@ public static void sendmail(String file,String fileName)
         message.setFrom(new InternetAddress(from));
         message.setRecipients(Message.RecipientType.TO,
                 InternetAddress.parse(to));
-        message.setSubject("This is autoamate report ");
+        message.setSubject("This is Automate report for PaymentPage");
         message.setText("PFA");
 
         MimeBodyPart messageBodyPart = new MimeBodyPart();

@@ -27,8 +27,9 @@ import com.Airpay.Reporting.Report_Setup;
 import com.Airpay.TestData.Excel_Handling;
 
 
-public class Create_TestNGXML {	
+public class Create_TestNGXML extends Constants {	
 	MailProjectClass mail =new MailProjectClass();
+	Zipfile zip =new Zipfile();
 	private static XSSFWorkbook workbook;
 	private static FileInputStream fis = null;
 	public  static int  Sheetcount ;
@@ -153,17 +154,25 @@ public class Create_TestNGXML {
     }
 	@AfterSuite
 	public void sendreport()
-	{
-		File f = new File("D:\\\\Automation\\\\AirpayAutomationProject_Updated\\\\Airpay_Automation_Framework\\\\AirPayTestData\\\\Result\\\\Graphical Reporting\\\\HTML");
+	{	String trim_path = zip.removeLastCharacter(snapshotsPath,1);
+	String zip_path = zip.removeLastCharacter(snapshotsPath,3);
+	System.out.println("trimpath-------------"+trim_path);
+	System.out.println("zippath-------------"+zip_path);
+	//zip.compress(trim_path);
+		//zip.compress(snapshotsPath);
+		//C:/Users/shishir.shah/git/AirpayAutomationProject_Updated/Airpay_Automation_Framework/AirPayTestData/Result/Graphical Reporting/HTML
+		File f = new File(trim_path);
 		File[] files = f.listFiles();
-		Arrays.sort(files, new Comparator() {
+		Arrays.sort(files, new Comparator()
+		{
 			public int compare(File f1, File f2) {
 				return Long.valueOf(f1.lastModified()).compareTo(
 						f2.lastModified());
-			}
+		}
 
 			@Override
-			public int compare(Object o1, Object o2) {
+			public int compare(Object o1, Object o2) 
+			{
 				// TODO Auto-generated method stub
 				return 0;
 			}
@@ -176,8 +185,10 @@ public class Create_TestNGXML {
 		System.out.println("Latest File is: "
 				+ files[files.length - 1].getName());
 		System.out.println();
-		String file = "D:/Automation/AirpayAutomationProject_Updated/Airpay_Automation_Framework/AirPayTestData/Result/Graphical Reporting/HTML/"+files[files.length - 1].getName();
-		mail.sendmail(file, files[files.length - 1].getName());
+		String file = zip_path+files[files.length - 1].getName();
+		//String filepath = snapshotsPath+".zip";
+		//files[files.length - 1].getName()
+		mail.sendmail(trim_path,files[files.length - 1].getName());
 	}
 	public boolean killProcessRunning(String serviceName) throws Exception {
 		boolean flag = false;
