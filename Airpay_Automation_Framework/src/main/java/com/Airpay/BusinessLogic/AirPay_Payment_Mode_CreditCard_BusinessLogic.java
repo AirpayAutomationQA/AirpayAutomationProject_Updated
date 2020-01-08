@@ -572,7 +572,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			Thread.sleep(10000);
 			if(Assert.isElementDisplayed(driver, SessionTimer, "Session timer")){
 				Extent_Reporting.Log_report_img("Session timer popup is exist", "Passed", driver);	
-				Assert.Clickbtn(driver, UPICrossCancelBtn, "Cross cance button");	
+				Assert.Clickbtn(driver, UPICrossCancelBtn, "Cross cancel button");	
 				Assert.waitForPageToLoad(driver);
 				errMsg = driver.findElement(By.xpath(CardInvalidErrMsgVerify)).getText();
 				if(errMsg.contains("REJECTED. Please try paying using another method?")
@@ -1307,16 +1307,20 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 
 		try{
 			Assert.waitForPageToLoad(driver);
-			if(Assert.isElementDisplayed(driver, UPICommonPayment, "UPI Red line Error is exist")){
+			
+			if(Assert.isElementDisplayed(driver, UPICommonPayment, "UPI Red line Error is exist"))
+		{
 				Assert.inputText(driver, UPIAddressCommonField, UserID, "UPI Address field");
 				Extent_Reporting.Log_report_img("UPI Address detail entered", "assed", driver);
 				Assert.Clickbtn(driver, UPICommonPayment, "UPI make button");    
 				Assert.waitForPageToLoad(driver);
-			}else{
+			
+		}
+			else{
 				Extent_Reporting.Log_Fail("UPI Address Field Does not exist", "Failed", driver);
-				//throw new Exception("UPI Address Field Does not exist");
+				}
 			}
-		}catch(Exception e) 
+			catch(Exception e) 
 		{
 			Extent_Reporting.Log_Fail("UPI Address Field Does not exist", "Failed", driver);
 			Log.error("UPI Address Field Does not exist");
@@ -1324,16 +1328,66 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			//throw new Exception("UPI Address Field Does not exist");
 		}
 	}
-	
+	public void Invalid_UPIAddress_Common_Gpay(String UserID) throws Exception{
+
+		try{
+			Assert.waitForPageToLoad(driver);
+			
+			if(Assert.isElementDisplayed(driver, UPICommonPaymentGpay, "UPI Red line Error is exist for gpay"))
+		{
+				Assert.inputText(driver, UPIAddressGpay, UserID, "UPI Address field");
+				Extent_Reporting.Log_report_img("UPI Address detail entered", "assed", driver);
+				Assert.Clickbtn(driver, UPICommonPaymentGpay, "UPI make button");    
+				Assert.waitForPageToLoad(driver);
+			
+		}
+			else{
+				Extent_Reporting.Log_Fail("UPI Address Field Does not exist", "Failed", driver);
+				}
+			}
+			catch(Exception e) 
+		{
+			Extent_Reporting.Log_Fail("UPI Address Field Does not exist", "Failed", driver);
+			Log.error("UPI Address Field Does not exist");
+			e.printStackTrace();
+			//throw new Exception("UPI Address Field Does not exist");
+		}
+	}
+	public void Invalid_UPIAddress_Common_upi(String UserID) throws Exception{
+
+		try{
+			Assert.waitForPageToLoad(driver);
+			
+			if(Assert.isElementDisplayed(driver, UPICommonPaymentUpi, "UPI Red line Error is exist for upi"))
+		{
+				Assert.inputText(driver, UPIAddressField, UserID, "UPI Address field");
+				Extent_Reporting.Log_report_img("UPI Address detail entered", "assed", driver);
+				Assert.Clickbtn(driver, UPICommonPaymentUpi, "UPI make button");    
+				Assert.waitForPageToLoad(driver);
+			
+		}
+			else{
+				Extent_Reporting.Log_Fail("UPI Address Field Does not exist", "Failed", driver);
+				}
+			}
+			catch(Exception e) 
+		{
+			Extent_Reporting.Log_Fail("UPI Address Field Does not exist", "Failed", driver);
+			Log.error("UPI Address Field Does not exist");
+			e.printStackTrace();
+			//throw new Exception("UPI Address Field Does not exist");
+		}
+	}
 	public void Gpay_Common(String UserID) throws Exception{
 
 		try{
 			Assert.waitForPageToLoad(driver);
-			if(Assert.isElementDisplayed(driver, UPICommonPayment, "UPI Red line Error is exist")){
+			if(Assert.isElementDisplayed(driver, UPICommonPaymentGpay, "UPI Red line Error is exist")){
+			
 				Assert.inputText(driver, UPIAddressCommonField, UserID, "UPI Address field");
 				Assert.selectDropBoxValuebyVisibleTextwithoutClick(driver, TezDomainName, Excel_Handling.Get_Data(TC_ID, "TezDomain").trim(), "Bank Domain name");
 				Extent_Reporting.Log_report_img("UPI Address detail entered", "assed", driver);
-				Assert.Clickbtn(driver, UPICommonPayment, "UPI make button");    
+				Assert.Clickbtn(driver, UPICommonPaymentGpay, "UPI make button");    
 				Assert.waitForPageToLoad(driver);
 			}else{
 				Extent_Reporting.Log_Fail("UPI Address Field Does not exist", "Failed", driver);
@@ -1518,8 +1572,9 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 	public void Card_InvalidMesgVerify() throws Exception{
 		try{	
 			Thread.sleep(10000);
-			String errMsg = driver.findElement(By.xpath(CardInvalidErrMsgVerify)).getText();
-			System.out.println(errMsg);
+			//String errMsg = driver.findElement(By.xpath(CardInvalidErrMsgVerify)).getText();
+			String errMsg = (String) ((JavascriptExecutor)driver).executeScript("return arguments[0].innerHTML", CardInvalidErrMsgVerify);
+			System.out.println("Error message=="+errMsg);
 			if(errMsg.contains("Transaction Operation Failed - Card No, not valid. Card Number is Invalid")					            
 					||errMsg.contains("Transaction Operation Failed - Card No, not valid. Card Number Verification Failed") 		                    
 					||errMsg.contains("Please use a valid debit card issued in india")|| errMsg.contains("Improper Card Name Entered")
@@ -1595,7 +1650,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 					{
 						Extent_Reporting.Log_Pass("Gpay wallet selected", "Passed");
 						Extent_Reporting.Log_report_img(" Gpay wallet selected", "Passed", driver);
-						Invalid_UPIAddress_Common(Excel_Handling.Get_Data(TC_ID, "UPI_Address").trim());
+						Invalid_UPIAddress_Common_Gpay(Excel_Handling.Get_Data(TC_ID, "UPI_Address").trim());
 						sessionInvalidUserID();
 						ErrorPopupMsgClikcbtn();
 						AirPay_Local.Card_Details_Options();
@@ -1645,7 +1700,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 						else if(popularbackName.contains("other")){
 							Extent_Reporting.Log_Pass("UPI other Wallet selected", "Passed");
 							Extent_Reporting.Log_report_img("UPI other wallet selecetd", "passed", driver);
-							Invalid_UPIAddress_Popup(Excel_Handling.Get_Data(TC_ID, "UPI_Address").trim());
+							Invalid_UPIAddress_Common_upi(Excel_Handling.Get_Data(TC_ID, "UPI_Address").trim()+"@upi");
 							sessionInvalidUserID();	
 							ErrorPopupMsgClikcbtn();
 							AirPay_Local.Card_Details_Options();
@@ -1836,7 +1891,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 						else if(popularbackName.contains("other")){
 							Extent_Reporting.Log_Pass("UPI other Wallet selected", "Passed");
 							Extent_Reporting.Log_report_img("UPI other wallet selecetd", "passed", driver);
-							Invalid_UPIAddress_Popup(Excel_Handling.Get_Data(TC_ID, "UPI_Address").trim());
+							Invalid_UPIAddress_Common_upi(Excel_Handling.Get_Data(TC_ID, "UPI_Address").trim());
 							sessionCancel_errMsg();	
 							ErrorPopupMsgClikcbtn();
 							AirPay_Local.Card_Details_Options();				

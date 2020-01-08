@@ -46,7 +46,7 @@ public class Airpay_PaymentPage_PageObject {
 		public static final String CreditCardMakePaymtBtn = "//input[@class='btn submit-credit-dtls']";
 		public static final String CreditCardHolderName = "(//div[@class='blockMain blockCards credit-tab']//following::input[contains(@class,'form-control cardname')])[1]";
 		public static final String CreditCardErrField = "//div[@class='formDom form-group errorvalue']//label";
-		public static final String CardInvalidErrMsgVerify = "(//*[@class='generic-error'])[1]";
+		public static final String CardInvalidErrMsgVerify = "(//*[@class='generic-error'])[2]";
 		public static final String GenericSuccessMessage = "(//*[@class='generic-success'])[1]";
 		public static final String PopupErrmShbBtn = "(//*[@class='msgclosebtn'])[1]";
 
@@ -95,7 +95,9 @@ public class Airpay_PaymentPage_PageObject {
         public static final String UPIMakePayment ="(//*[@class='btn' and @data-sub-form-id='upi-form'])[1]";
        // public static final String UPIMakePayment ="(//*[@class='btn' and @data-sub-form-id='upi-form'])[2]";
 
-        public static final String UPICommonPayment ="(//*[@class='btn' and @data-sub-form-id='upi-form'])[2]";
+        public static final String UPICommonPayment ="(//*[@class='btn' and @data-sub-form-id='upi-form'])[3]";
+        public static final String UPICommonPaymentGpay ="(//*[@class='btn' and @data-sub-form-id='upi-form'])[2]";
+        public static final String UPICommonPaymentUpi ="(//*[@class='btn' and @data-sub-form-id='upi-form'])[1]";
         //public static final String UPICommonPayment ="(//*[@class='btn' and @data-sub-form-id='upi-form'])[3]";
 
         public static final String payTmChaanelInput ="//input[@class='form-control paytm-validation']";
@@ -126,11 +128,13 @@ public class Airpay_PaymentPage_PageObject {
    //************************************** UPI Channel Locators **********************************
 		public static final String UPIAddressField ="//input[contains(@class,'form-control upi-validation')]";
 		public static final String UPIAddressCommonField ="//input[contains(@class,'form-control other-upi-validation')]";
+		public static final String UPIAddressGpay ="//input[contains(@class,'form-control mobnumns gpmob-validation')]";
 
 		
 		public static final String SessionTimer ="//*[@class='timer']";
 		public static final String UPIAddIcon ="//*[@class='input-group-addon icon iupi']";
 		public static final String UPICrossCancelBtn ="//a[@class='cls-popup upibtnclose']";
+		public static final String UPIError = "(//div[@class='generic-error'])[2]";
 		
 	//*****************************************  EMI Channel Locators *************************************
 		public static final String EMIActive_radio_verfiy = "(//*[@class='emitable active']/table/tbody/tr/td/input)";
