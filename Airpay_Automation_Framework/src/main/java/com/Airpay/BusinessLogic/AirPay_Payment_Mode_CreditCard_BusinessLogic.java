@@ -1883,6 +1883,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 							Extent_Reporting.Log_Pass("mobiKwik Wallet selected", "Passed");
 							Extent_Reporting.Log_report_img("mobiKwik wallet selecetd", "passed", driver);
 							Invalid_UPIAddress_Common(Excel_Handling.Get_Data(TC_ID, "MobiKwikiUserID").trim());
+							Thread.sleep(20000);
 							sessionCancel_errMsg();						
 							ErrorPopupMsgClikcbtn();
 							AirPay_Local.Card_Details_Options();				
