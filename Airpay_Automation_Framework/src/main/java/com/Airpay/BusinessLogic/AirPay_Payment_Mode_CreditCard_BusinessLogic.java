@@ -1206,7 +1206,27 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 			//throw new Exception("UPI Address Red Line Error does not exist");
 		}
 	}
-	
+	public void UPIErrorMSgForGpay() throws Exception{
+		try{
+			Assert.waitForPageToLoad(driver);
+			Assert.Clickbtn(driver, UPICommonPaymentGpay, "UPi Common make button");    
+			if(Assert.isElementDisplay(driver, UPICommoneErrLine)){
+				Assert.isElementDisplayed(driver, UPICommoneErrLine, "UPI Red line Error is exist");
+				Extent_Reporting.Log_Pass("UPI Address red line error is exist as expected", "Passed");
+				Extent_Reporting.Log_report_img("UPI Address error screen print", "Passed", driver);
+
+			}else{
+				Extent_Reporting.Log_Fail("UPI Address Red Line Error does not exist", "Failed", driver);
+				//throw new Exception("UPI Address Red Line Error does not exist");
+			}
+		}catch(Exception e) 
+		{
+			Extent_Reporting.Log_Fail("UPI Address Red Line Error does not exist", "Failed", driver);
+			Log.error("UPI Address Red Line Error does not exist");
+			e.printStackTrace();
+			//throw new Exception("UPI Address Red Line Error does not exist");
+		}
+	}
 	public void UPIErrorMSgForOther() throws Exception{
 		try{
 			Assert.waitForPageToLoad(driver);
@@ -1508,7 +1528,7 @@ public class AirPay_Payment_Mode_CreditCard_BusinessLogic extends Airpay_Payment
 						Extent_Reporting.Log_report_img(" Gpay wallet selected", "Passed", driver);
 						AirPay_Payment_Mode_Debit_Card_BusinessLogic obj = new AirPay_Payment_Mode_Debit_Card_BusinessLogic(driver, TC_ID); 
 						obj.SurchargeForCommonFunctionNotclickplus();
-						UPIErrorMSgForALL();
+						UPIErrorMSgForGpay();
 						
 					}else{
 						
