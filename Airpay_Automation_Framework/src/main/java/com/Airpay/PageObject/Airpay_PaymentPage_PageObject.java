@@ -165,7 +165,7 @@ public class Airpay_PaymentPage_PageObject {
 	//************************************************************Tez Channel ***************************
 		public static final String TezIDField ="//*[@class='form-control tez-validation']";
 		public static final String TezIDMakepayment ="//*[@class='btn' and @data-sub-form-id='upi-form']";
-		public static final String TezDomainName ="//*[@class='form-control tez-upi-bank']";
+		public static final String TezDomainName ="//*[@class='form-control upi-bank']";
 		public static final String TezIdFieldErrRedline ="//*[@class='formDom form-group errorvalue']";		
 		public static final String TezDomainRedLineErr= "//*[@class='formDom form-group select-group errorvalue']";
 		public static final String PaytmlogoIcon ="//div[@class='paytm_logo icon']";
