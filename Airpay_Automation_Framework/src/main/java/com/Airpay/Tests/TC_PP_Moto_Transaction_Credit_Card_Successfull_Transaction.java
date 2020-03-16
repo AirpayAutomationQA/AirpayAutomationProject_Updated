@@ -33,6 +33,7 @@ public class TC_PP_Moto_Transaction_Credit_Card_Successfull_Transaction extends 
 				AirPay_Local.Verify_PaymentPageFields();
 				AirPay_Local.Card_Details_Options();
 				CreditCard.Credit_cardProvidingValuesWithValidCardNumber();
+				
 				CreditCard.Cash_paymentSuccessMesg();
 				//CreditCard.Card_InvalidMesgVerify();
 			Log.info("Scripts Ends....");

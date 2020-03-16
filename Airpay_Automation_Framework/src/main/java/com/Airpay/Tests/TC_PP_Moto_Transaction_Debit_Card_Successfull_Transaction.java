@@ -35,6 +35,7 @@ public class TC_PP_Moto_Transaction_Debit_Card_Successfull_Transaction extends D
 				AirPay_Local.Verify_PaymentPageFields();
 				AirPay_Local.Card_Details_Options();
 				DebitCard.Debit_cardProvidingValuesWithValidData();	
+				
 				CreditCard.Cash_paymentSuccessMesg();
 
 				//CreditCard.Card_InvalidMesgVerify();

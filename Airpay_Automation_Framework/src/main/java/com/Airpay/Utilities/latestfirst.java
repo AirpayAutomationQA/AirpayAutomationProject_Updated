@@ -5,35 +5,35 @@ import java.util.*;
 import java.util.Comparator;
 //Code for finding latest file in directory
 
-	public class latestfirst {
+	public class latestfirst extends MailProjectClass {
 		public static void main(String[] args) throws Exception {
-		File f = new File("D:\\\\Automation\\\\AirpayAutomationProject_Updated\\\\Airpay_Automation_Framework\\\\AirPayTestData\\\\Result\\\\Graphical Reporting\\\\HTML");
-		File[] files = f.listFiles();
-		Arrays.sort(files, new Comparator() {
-			public int compare(File f1, File f2) {
-				return Long.valueOf(f1.lastModified()).compareTo(
-						f2.lastModified());
-			}
-
-			@Override
-			public int compare(Object o1, Object o2) {
-				// TODO Auto-generated method stub
-				return 0;
-			}
-
+			//give path till folder
 			
-		});
+			sendmailmulattach("C://Users//swapnil.pawar//Desktop//Error_report//MA_Report",2,"Testmail");
+			
+		/*
+		 File f = new File("C://Users//swapnil.pawar//Desktop//Error_report//MA_Report");
+		 
+		File[] files = f.listFiles();
+		 Arrays.sort(files, (f1, f2) -> {
+	         return new Date(f1.lastModified()).compareTo(new Date(f2.lastModified()));
+	      });
 		System.out.println("Files of the directory: ");
 		for (int i = 0; i < files.length; i++) {
 			System.out.println(files[i].getName());
+			
+			System.out.println("file path"+files[i].getPath());
 		}
 		System.out.println();
 		System.out.println("Latest File is: "
-				+ files[files.length - 1].getName());
+				+ files[files.length-1].getName());
+		
 		System.out.println();
-	/*
+		
+		/*
 		File file = new File(files[files.length - 1].getPath());
 		String filename = file.getPath();
+		System.out.println("file path"+filename);
 		BufferedReader reader = new BufferedReader(new FileReader(filename));
 		String line = null;
 		System.out.println("File Data");

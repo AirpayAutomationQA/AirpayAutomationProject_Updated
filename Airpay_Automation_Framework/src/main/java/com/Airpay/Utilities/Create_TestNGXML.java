@@ -152,6 +152,7 @@ public class Create_TestNGXML extends Constants {
         Report_Setup.extent.flush();    
 	
     }
+	/*
 	@AfterSuite
 	public void sendreport()
 	{	String trim_path = zip.removeLastCharacter(snapshotsPath,1);
@@ -190,6 +191,7 @@ public class Create_TestNGXML extends Constants {
 		//files[files.length - 1].getName()
 		mail.sendmail(trim_path,files[files.length - 1].getName());
 	}
+	*/
 	public boolean killProcessRunning(String serviceName) throws Exception {
 		boolean flag = false;
 		try
